@@ -21,7 +21,7 @@ class VideoJuego{
 
 //Objetos
 
-//Consolas de Video Juegos
+//<----------------------------------Consolas de Video Juegos-------------------------------------------->
 
 //PSX ----->
 
@@ -32,45 +32,79 @@ const consola1b = new ConsolaVideoJuego("Play Station 5","Sony","CFI-1100B", "Ne
 const consola1c = new ConsolaVideoJuego("Play Station 5", "Sony","CFI-11015B", "Blanca",350000)
 const consola1d = new ConsolaVideoJuego("Play Station 5", "Sony","CFI-11015B", "Negra",350000)
 //PS5 MODELO FFVII ESPECIAL EDITION
-const consola1e = new ConsolaVideoJuego("Play Station 4", "Sony","CFI-1100B", "FFVII ESPECIAL EDITION",500000)
+const consola1e = new ConsolaVideoJuego("Play Station 5", "Sony","CFI-1100B", "FFVII ESPECIAL EDITION",500000)
 
 
 //PS4 MODELO Slim 
-const consola2a = new ConsolaVideoJuego("Play Station 4", "Sony","Slim", "Blanca",200000)
+const consola1f = new ConsolaVideoJuego("Play Station 4", "Sony","Slim", "Blanca",200000)
 //PS4 MODELO PRO
-const consola2b = new ConsolaVideoJuego("Play Station 4", "Sony","PRO", "Negra",250000)
+const consola1g = new ConsolaVideoJuego("Play Station 4", "Sony","PRO", "Negra",250000)
 
 
 //XBOX----->
 
 //XBOX MODELO S
-const consola3a = new ConsolaVideoJuego("XBOX Series", "Microsoft","S", "Negra",350000)
-const consola3b = new ConsolaVideoJuego("XBOX Series", "Microsoft","S", "Blanca",350000)
+const consola2a = new ConsolaVideoJuego("XBOX Series", "Microsoft","S", "Negra",350000)
+const consola2b = new ConsolaVideoJuego("XBOX Series", "Microsoft","S", "Blanca",350000)
 //XBOX MODELO X
-const consola3c = new ConsolaVideoJuego("XBOX Series", "Microsoft","X", "Negra",450000)
-const consola3D = new ConsolaVideoJuego("XBOX Series", "Microsoft","X", "Blanca",450000)
+const consola2c = new ConsolaVideoJuego("XBOX Series", "Microsoft","X", "Negra",450000)
+const consola2d = new ConsolaVideoJuego("XBOX Series", "Microsoft","X", "Blanca",450000)
 
 
 //XBOX ONE
-const consola4a = new ConsolaVideoJuego("XBOX ONE","Microsoft", "Classic", "Verde",200000)
-const consola4b = new ConsolaVideoJuego("XBOX ONE","Microsoft", "Classic", "Azul",200000)
+const consola2e = new ConsolaVideoJuego("XBOX ONE","Microsoft", "Classic", "Verde",200000)
+const consola2f = new ConsolaVideoJuego("XBOX ONE","Microsoft", "Classic", "Azul",200000)
 //XBOX ONE MODELO S
-const consola4c = new ConsolaVideoJuego("XBOX ONE","Microsoft", "S", "Roja",200000)
+const consola2g = new ConsolaVideoJuego("XBOX ONE","Microsoft", "S", "Roja",200000)
 
 
 //NINTENDO----->
 
 //Nintendo Oled
-const consola5a = new ConsolaVideoJuego("Nintendo Switch","Nintendo","Oled", "Blanca", 450000)
-const consola5b = new ConsolaVideoJuego("Nintendo Switch","Nintendo","Oled", "Negra", 450000)
+const consola3a = new ConsolaVideoJuego("Nintendo Switch","Nintendo","Oled", "Blanca", 450000)
+const consola3b = new ConsolaVideoJuego("Nintendo Switch","Nintendo","Oled", "Negra", 450000)
 //Nintendo Switch classic
-const consola5c = new ConsolaVideoJuego("Nintendo Switch","Nintendo","Classic", "Blanca", 350000)
-const consola5d = new ConsolaVideoJuego("Nintendo Switch","Nintendo","Classic", "Azul", 350000)
+const consola3c = new ConsolaVideoJuego("Nintendo Switch","Nintendo","Classic", "Blanca", 350000)
+const consola3d = new ConsolaVideoJuego("Nintendo Switch","Nintendo","Classic", "Azul", 350000)
 
 //Nintendo DS XL
-const consola5e = new ConsolaVideoJuego("Nintendo DS","Nintendo","XL", "Silver", 150000)
+const consola3e = new ConsolaVideoJuego("Nintendo DS","Nintendo","XL", "Silver", 150000)
 //Nintendo DS
-const consola5f = new ConsolaVideoJuego("Nintendo DS","Nintendo","Classic", "Gold", 15000)
+const consola3f = new ConsolaVideoJuego("Nintendo DS","Nintendo","Classic", "Gold", 150000)
+
+//<-----------------------------------------------Video Juegos--------------------------------------------------->
+
+
+
+//<------------------------------------------------Arrays--------------------------------------------------------->
+
+
+const consolas = [consola1a,consola1b,consola1c,consola1d,consola1e,consola1f,consola1g,consola2a,
+    consola2b,consola2c,consola2d,consola2e,consola2f,consola2g,consola3a,consola3b,consola3c,consola3d,
+    consola3e,consola3f]
+
+
+//<--------------------------------------------------------------------------------------------------------->
+
+consolas.forEach((consola)=>{
+    console.log(consola.fabricante)
+
+})
+
+const seleccion = prompt("Elige una marca").toLocaleLowerCase()
+
+switch(seleccion){
+    case "nintendo":
+        consolas.forEach((consola) =>{
+            console.log(consola.nombre, consola.modelo, consola.color)
+            
+        }) 
+
+}
+    consolas.forEach((consola) =>{
+        console.log(consola.nombre, consola.modelo, consola.color)
+        
+    })
 
 
 
