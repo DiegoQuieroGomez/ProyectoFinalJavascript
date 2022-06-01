@@ -180,7 +180,7 @@ function comprarConsola(){
 
 
 /*
-const mostrarPorConsola = (cuadro) =>{
+const mostrarPorConsola = (Consola) =>{
     console.log("El cuadro para " + cuadro.categoria + ", "+ cuadro.genero + ", tamaño " + cuadro.medida + 
                 ", de color "+ cuadro.color + ", tiene un precio de $" + cuadro.precio)
 
