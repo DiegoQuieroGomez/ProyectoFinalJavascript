@@ -1,9 +1,9 @@
 
 //Clases
 class ConsolaVideoJuego{
-        constructor(nombre, fabricante, modelo, color, precio){
+        constructor(nombre, marca, modelo, color, precio){
         this.nombre = nombre
-        this.fabricante = fabricante
+        this.marca = marca
         this.modelo = modelo
         this.color = color
         this.precio = precio
@@ -86,32 +86,39 @@ const consolas = [consola1a,consola1b,consola1c,consola1d,consola1e,consola1f,co
 
 //<--------------------------------------------------------------------------------------------------------->
 
-consolas.forEach((consola)=>{
-    console.log(consola.fabricante)
-
-})
-
-const seleccion = prompt("Elige una marca").toLocaleLowerCase()
-
-switch(seleccion){
-    case "nintendo":
-        consolas.forEach((consola) =>{
-            console.log(consola.nombre, consola.modelo, consola.color)
+function listarConsolas(){
+    const seleccion = prompt("Elige una marca").toLocaleLowerCase()
+    switch (seleccion) {
+        case "playstation":
+            consolas.forEach((consola)=>{
+                console.log(consola.marca)
             
-        }) 
-
-}
-    consolas.forEach((consola) =>{
-        console.log(consola.nombre, consola.modelo, consola.color)
+            })
+            break;
         
-    })
-
+        case "xbox":
+            consolas.forEach((consola)=>{
+                console.log(consola.marca)
+            
+            })
+        
+        case "nintendo":
+            consolas.forEach((consola)=>{
+                console.log(consola.marca)
+            
+            })
+            
+        default:
+            break;
+    }
+}
+listarConsolas()
 
 
 
 
 /*
-const mostrarPorConsola = (cuadro) =>{
+const mostrarPorConsola = (Consola) =>{
     console.log("El cuadro para " + cuadro.categoria + ", "+ cuadro.genero + ", tamaño " + cuadro.medida + 
                 ", de color "+ cuadro.color + ", tiene un precio de $" + cuadro.precio)
 
