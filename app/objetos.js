@@ -49,10 +49,10 @@ const nintendoDS = new Fabricante("Nintendo Company","nintendo","DS")
 
 //Consola ------>
 //PS5
-const consola1a = new Consola(playStation5,"cfi-1100b","blanco",300000,"")
-const consola1b = new Consola(playStation5,"cfi-1100b","negro",300000,"")
-const consola1c = new Consola(playStation5,"cfi-11015b","blanco",300000,"")
-const consola1d = new Consola(playStation5,"cfi-11015b","negro",300000,"")
+const consola1a = new Consola(playStation5,"cfi-1100b","blanco",300000,"https://nissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/p/l/playstation_5_perfil_-_1_1.jpg")
+const consola1b = new Consola(playStation5,"cfi-1100b","negro",320000,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDmftCHl-SAV9ZS1TlOeXJIOTvrk0vGBkICk-OMrMcydrjTVqPCb1-iq7X9wLMPz2H5Nk&usqp=CAU")
+const consola1c = new Consola(playStation5,"cfi-11015b","blanco",300000,"https://www.google.com/imgres?imgurl=https%3A%2F%2Fnissei.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2F82488c8dc45c4819d3542b60fadf1fa9%2Fp%2Fl%2Fplaystation_5_perfil_-_1.jpg&imgrefurl=https%3A%2F%2Fnissei.com%2Far%2Fsony-playstation-5-825-gb-cfi-1015a&tbnid=5Kp2nZXdOL0-VM&vet=12ahUKEwis45OU2Zf4AhWmFbkGHRLxA98QMygAegUIARCNAg..i&docid=up_dpVT-E34huM&w=270&h=270&q=playstation%205%20cfi-101%20blanca%20imagen&ved=2ahUKEwis45OU2Zf4AhWmFbkGHRLxA98QMygAegUIARCNAg")
+const consola1d = new Consola(playStation5,"cfi-11015b","negro",300000,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDmftCHl-SAV9ZS1TlOeXJIOTvrk0vGBkICk-OMrMcydrjTVqPCb1-iq7X9wLMPz2H5Nk&usqp=CAU")
 
 //PS4
 const consola1f = new Consola(playStation4,"slim", "blanco",200000,"")
@@ -81,7 +81,7 @@ const consola3c = new Consola(nintendoSwitch,"classic",  "negro",380000,"")
 const consola3d = new Consola(nintendoSwitch,"classic",  "blanco",380000,"")
 
 //Nintendo DS XL
-const consola3e = new Consola(nintendoDS,"ds xl", "azul",250000,"")
+const consola3e = new Consola(nintendoDS,"xl", "azul",250000,"")
 //Nintendo DS
 const consola3f = new Consola(nintendoDS,"ds", "gold",180000,"")
 
@@ -104,7 +104,38 @@ const consolas = [consola1a,consola1b,consola1c,consola1d,consola1f,consola1g,co
 
 const carro = []
 
+const consolasPrueba = [consola1a,consola1b,consola1c,consola1d]
 //<--------------------------------------------------------------------------------------------------------->
+
+const cardContainer = document.querySelector("#cardContainer")
+
+consolasPrueba.forEach((producto) => {
+    const card = document.createElement("div")
+    card.className = "card"
+    card.innerHTML = `
+        <h3 class="cardTitle"> Consola ${producto.Fabricante.marca}</h3>
+        <img src="${producto.imagen}" class="cardImg">
+        <p class="cardDesc"> Modelo ${producto.modelo} - Color ${producto.color}
+        <span class="cardPrice"> $${producto.precio}</span>
+        <buttol data-id="${producto.Fabricante.marca}" class="buttonCTA"> Agregar al carrito </button>
+        `
+    cardContainer.append(card)
+
+})
+
+const agregarProducto = (e) => {
+    const productoElegido = e.target.getAttribute("data-id") 
+    const producto = consolasPrueba.find((producto) => producto.Fabricante.marca == productoElegido)
+    carro.push(producto)
+    console.log(carro)
+}
+
+const botonesCompra = document.querySelectorAll(".buttonCTA")
+botonesCompra.forEach((botonCompra) => {
+    botonCompra.addEventListener("click",agregarProducto)
+
+})
+
 
 function mostrarConsolas(){
 
@@ -115,12 +146,11 @@ function mostrarConsolas(){
 
 }
 
-
-
 mostrarConsolas()
 
+/////MAÑANA CREA EL MOSTRAR CARRO QLO
 
-
+/*
 function comprarConsola(){
     
     let seguirCompra = true
@@ -185,7 +215,7 @@ function recorreObjeto(objeto, variable, resultado){
     console.log(resultado)
 } 
        
-  
+*/ 
 
 
     
