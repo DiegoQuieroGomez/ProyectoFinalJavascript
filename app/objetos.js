@@ -97,15 +97,36 @@ const juego4 = new VideoJuego("Racing","Mario Kart",nintendoDS,40000,"")
 //<------------------------------------------------Arrays--------------------------------------------------------->
 
 
-//Array de consolas
+//Arrays
 const consolas = [consola1a,consola1b,consola1c,consola1d,consola1f,consola1g,consola2a,
     consola2b,consola2c,consola2d,consola2e,consola2f,consola3a,consola3b,consola3c,consola3d,
     consola3e,consola3f]
 
+const consolasPrueba = [consola1a,consola1b,consola1c,consola1d]
+
 const carro = []
 
-const consolasPrueba = [consola1a,consola1b,consola1c,consola1d]
+const historialDeBusqueda = []
+
+
 //<--------------------------------------------------------------------------------------------------------->
+
+const contenedorBuscador = document.querySelector("#buscador")
+
+
+//Creador de Buscadores
+function crearBuscador(contenedor){
+
+    const buscador = document.createElement("div")
+    buscador.className =" buscador"
+    buscador.innerHTML= `
+            <input type="text" id="busca">
+    `
+    contenedor.append(buscador)
+}
+
+crearBuscador(contenedorBuscador)
+
 
 const cardContainer = document.querySelector("#cardContainer")
 
@@ -138,12 +159,10 @@ botonesCompra.forEach((botonCompra) => {
 
 
 function mostrarConsolas(){
-
     consolas.forEach((consola)=>{
         console.log(consola.Fabricante.marca,consola.modelo,consola.color)
 
     })
-
 }
 
 mostrarConsolas()

@@ -46,3 +46,20 @@ body {
     background-color: rgb(184, 64, 64);
     box-shadow: 1px 1px 10px lightgrey;
 }
+
+/* Buscadores*/
+
+.contenedorBuscador{
+    padding: 50px;
+    margin: auto;
+    border-radius: 20px;
+    border-color: black;
+}
+
+
+.buscador{
+    padding: 10px;
+    margin: 50px;
+    
+
+}
