@@ -25,8 +25,13 @@ body {
     text-align: center;
     border-radius: 10px;
     border: rgb(150, 52, 52);
+}
 
-
+.productContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
 }
 
 
