@@ -159,32 +159,34 @@ function mostrarOfertas(){
 //Listar productos
 
 const productContainer = document.querySelector("#productContainer")
-function mostrarProductos(array){
-    array.forEach((producto) => {
+
+function mostrarProductos(){
+    todosMisProductos.forEach((producto) => {
         const product = document.createElement("div")
         product.className = "product"
         product.innerHTML =`
-                
-                <img src="${producto.imagen}" class="productImg>
-                <h2 class="modelo"> ${producto.tipoProducto} - ${producto.categoria} </h2>
-                <h1 class="producto"> Plataforma ${producto.Fabricante.producto}</h1>
-                <span class="price"> $${producto.precio}>
-        `
-        productContainer.append(product)
+                    
+            <img src="${producto.imagen}" class="productImg>
+            <h2 class="modelo"> ${product.tipoProducto} - ${producto.categoria} </h2>
+            <h1 class="producto"> Plataforma ${producto.Fabricante.producto}</h1>
+            <span class="price"> $${producto.precio}>
+            `
+            productContainer.append(product)
     })
 
 }
 
 const listarProductos = (e)=> {
-    const productoElegido = e.target.getAttribute("")
+    const productoElegido = e.target.getAttribute("id")
     const producto = todosMisProductos.filter((producto) => producto.Fabricante.marca == productoElegido)
     mostrarProductos(producto)
+    console.log(productoElegido)
 }
 
 const listar = document.querySelectorAll(".lista")
 listar.forEach((lista)=>{
     lista.addEventListener("click",listarProductos)
-
+    //console.log(lista)
 })
 
 //llena mi array con los productos creados
@@ -219,7 +221,7 @@ queMostrar(todosMisProductos)
 */
 //Agregar productos
 
-
+/*
 
 const agregarProducto = (e) => {
     const productoElegido = e.target.getAttribute("data-id") 
@@ -234,7 +236,7 @@ botonesCompra.forEach((botonCompra) => {
 
 })
 
-
+*/
 //EJEMPLO CARTA
 /* 
 const cardContainer = document.querySelector("#cardContainer")
