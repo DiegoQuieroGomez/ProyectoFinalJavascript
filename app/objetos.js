@@ -175,19 +175,46 @@ function mostrarProductos(){
     })
 
 }
+const prueba = document.querySelector("#titulo")
+prueba.addEventListener("click", event => {
+    console.log(event.target.getAttribute('id'))
+})
 
+/*
 const listarProductos = (e)=> {
-    const productoElegido = e.target.getAttribute("id")
-    const producto = todosMisProductos.filter((producto) => producto.Fabricante.marca == productoElegido)
+    const productoElegido = e.target.getAttribute("data-id")
+    const producto = todosMisProductos.find((producto) => producto.Fabricante.marca == productoElegido)
     mostrarProductos(producto)
-    console.log(productoElegido)
+    console.log(e.target.getAttribute("data-id"))
 }
+
 
 const listar = document.querySelectorAll(".lista")
 listar.forEach((lista)=>{
     lista.addEventListener("click",listarProductos)
-    //console.log(lista)
+    console.log(lista)
 })
+
+/*
+
+const agregarProducto = (e) => {
+    const productoElegido = e.target.getAttribute("data-id") 
+    const producto = consolasPrueba.find((producto) => producto.Fabricante.marca == productoElegido)
+    carro.push(producto)
+    console.log(carro)
+}
+
+const botonesCompra = document.querySelectorAll(".buttonCTA")
+botonesCompra.forEach((botonCompra) => {
+    botonCompra.addEventListener("click",agregarProducto)
+
+})
+
+*/
+
+
+
+
 
 //llena mi array con los productos creados
 function llenarArrayMisProductos(primerArray, segundoArray){
