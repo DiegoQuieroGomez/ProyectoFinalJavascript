@@ -158,59 +158,40 @@ function mostrarOfertas(){
 
 //Listar productos
 
+const mostrarNombre = () =>{
+    console.log("evento Escuchado")
+}
 const productContainer = document.querySelector("#productContainer")
-
-function mostrarProductos(){
-    todosMisProductos.forEach((producto) => {
-        const product = document.createElement("div")
-        product.className = "product"
-        product.innerHTML =`
-                    
+function listarProductosPorMarca(array){
+    productContainer.innerHTML =""
+    array.forEach((producto) => {
+        
+        const item = document.createElement("div")
+        item.className = "product"
+        item.innerHTML =`         
             <img src="${producto.imagen}" class="productImg>
-            <h2 class="modelo"> ${product.tipoProducto} - ${producto.categoria} </h2>
+            <h2 class="modelo"> ${producto.tipoProducto} - ${producto.categoria} </h2>
             <h1 class="producto"> Plataforma ${producto.Fabricante.producto}</h1>
             <span class="price"> $${producto.precio}>
-            `
-            productContainer.append(product)
+            <button type=""button class="agregarAlCarro">Añade al carrito </button>
+         `
+        productContainer.append(item)
     })
-
+    
 }
-const prueba = document.querySelector("#titulo")
-prueba.addEventListener("click", event => {
-    console.log(event.target.getAttribute('id'))
-})
 
-/*
-const listarProductos = (e)=> {
-    const productoElegido = e.target.getAttribute("data-id")
-    const producto = todosMisProductos.find((producto) => producto.Fabricante.marca == productoElegido)
-    mostrarProductos(producto)
-    console.log(e.target.getAttribute("data-id"))
+const mostrarProductos = (e) => {
+    const productosElegidos = e.target.getAttribute("data-id")
+    const productos = todosMisProductos.filter((productos) => productos.Fabricante.marca == productosElegidos)
+    listarProductosPorMarca(productos)
 }
 
 
-const listar = document.querySelectorAll(".lista")
-listar.forEach((lista)=>{
-    lista.addEventListener("click",listarProductos)
-    console.log(lista)
+const botonesLista = document.querySelectorAll(".lista")
+botonesLista.forEach((botonlista) =>{
+    botonlista.addEventListener("click", mostrarProductos)
 })
 
-/*
-
-const agregarProducto = (e) => {
-    const productoElegido = e.target.getAttribute("data-id") 
-    const producto = consolasPrueba.find((producto) => producto.Fabricante.marca == productoElegido)
-    carro.push(producto)
-    console.log(carro)
-}
-
-const botonesCompra = document.querySelectorAll(".buttonCTA")
-botonesCompra.forEach((botonCompra) => {
-    botonCompra.addEventListener("click",agregarProducto)
-
-})
-
-*/
 
 
 
@@ -227,59 +208,3 @@ function llenarArrayMisProductos(primerArray, segundoArray){
     
     })
 }  
-
-/*
-const contenedorBuscador = document.querySelector("#buscador")
-
-function crearBuscador(contenedor){
-
-    const buscador = document.createElement("div")
-    buscador.className =" buscador"
-    buscador.innerHTML= `
-            <input type="text" id="busca">
-    `
-    contenedor.append(buscador)
-}
-
-crearBuscador(contenedorBuscador)
-
-
-queMostrar(todosMisProductos)
-*/
-//Agregar productos
-
-/*
-
-const agregarProducto = (e) => {
-    const productoElegido = e.target.getAttribute("data-id") 
-    const producto = consolasPrueba.find((producto) => producto.Fabricante.marca == productoElegido)
-    carro.push(producto)
-    console.log(carro)
-}
-
-const botonesCompra = document.querySelectorAll(".buttonCTA")
-botonesCompra.forEach((botonCompra) => {
-    botonCompra.addEventListener("click",agregarProducto)
-
-})
-
-*/
-//EJEMPLO CARTA
-/* 
-const cardContainer = document.querySelector("#cardContainer")
-
-function mostrarOfertas(){
-    ofertas.forEach((producto) => {
-        const card = document.createElement("div")
-        card.className = "card"
-        card.innerHTML = `
-            <h3 class="cardTitle"> Consola ${producto.Fabricante.marca}</h3>
-            <img src="${producto.imagen}" class="cardImg">
-            <p class="cardDesc"> Modelo ${producto.modelo} - Color ${producto.color}
-            <span class="cardPrice"> $${producto.precio*0.75}<BR>25% desc.</span>
-            <buttol data-id="${producto.Fabricante.marca}" class="buttonCTA"> Agregar al carro </button>
-            `
-        cardContainer.append(card)
-    })
-}
-*/
