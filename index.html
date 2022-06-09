@@ -8,63 +8,48 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div class="contenedor_de_todo">
-       <div class="header">
-            <div id="titulo" data-id="estoEsUnaPrueba">
-                <h1>Nombre de la tienda</h1>
-            </div>
-            <div id="buscador" class="contenedorBuscador">
-
-            </div>
-            <div id="historial">
-                <h1><a href="#">Historial de busqueda</a></h1>
-            </div>
-            <div id="carroDeCompra" class="carro">
-                <span class="carrito"><a href="#"></a></span>
-
-            </div>
-       </div>
+    
        
-        <nav class="nav">
+    <div class="header">
+        <div id="titulo" id="titulo">
+            <h1>Nombre de la tienda</h1>
+        </div>
+
+        <div id="Contenedorbuscador" class="contenedorBuscador">
+            <!---Se inserta dinamicamente JS -->
+        </div>
+
+        <div id="historial" class="historial">
+            <h1>Historial de COMPRA</h1>
+        </div>
+
+        <div id="carroDeCompra" class="carro">
+            <span class="carrito">CARRO</a></span>
+        </div>
+    </div>
+       
+    <div class="main">
+        <nav class="navegar">
             <ul class="navbar">
-                <li id="section1"><a href="#">Categorias</a>
-                    <div id="subsection">
-                        <p class="tittleSubSection"><a href="#">Plataforma</a></p>
-                        <ul>
-                            <li data-id="playStation" class="lista">PlayStation</li>
-                            <li data-id="xbox" class="lista">XBOX</li>
-                            <li data-id="nintendo" class="lista">Nintendo</li>
-                          
-                        </ul>
-                    </div> 
-                </li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Historial de Compra</a></li>
-                <li><a href="#">Ayuda</a></li>
+                <ul class="menuProductos">
+                    <li data-id="playStation" class="lista">PlayStation</li>
+                    <li data-id="xbox" class="lista">XBOX</li>
+                    <li data-id="nintendo" class="lista">Nintendo</li>     
+                </ul>
+                    
             </ul>
         </nav>
-
-        <div id="cardContainer" class="cardContainer"> 
-
-
+    
+        <div id="contentContainer" class="contentContainer">
+                <!---Se inserta dinamicamente JS -->
         </div>
+    
 
-        <div id="productContainer" class="productContainer">
+    </div>
 
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div id="footer "class="footer">
+            <!---Se inserta dinamicamente JS -->
+    </div>
 
 
     </div>

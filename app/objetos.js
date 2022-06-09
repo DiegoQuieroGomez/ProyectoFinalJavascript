@@ -161,7 +161,7 @@ function mostrarOfertas(){
 const mostrarNombre = () =>{
     console.log("evento Escuchado")
 }
-const productContainer = document.querySelector("#productContainer")
+const productContainer = document.querySelector("#contentContainer")
 function listarProductosPorMarca(array){
     productContainer.innerHTML =""
     array.forEach((producto) => {
