@@ -25,8 +25,6 @@ llenarArrayMisProductos(consolas,juegos)
 const cardContainer = document.querySelector("#cardContainer")
 const productContainer = document.querySelector("#contentContainer")
 
-
-
 //Funciones
 
 function mostrarOfertas(){
@@ -38,7 +36,7 @@ function mostrarOfertas(){
             <img src="${producto.imagen}" class="cardImg">
             <p class="cardDesc"> Modelo ${producto.modelo} - Color ${producto.color}
             <span class="cardPrice"> $${producto.precio*0.75}<BR>25% desc.</span>
-            <buttol data-id="${producto.Fabricante.marca}" class="buttonCTA"> Agregar al carro </button>
+            <button data-id="${producto.Fabricante.marca}" class="buttonCTA"> Agregar al carro </button>
             `
         cardContainer.append(card)
     })
@@ -59,9 +57,11 @@ function listarProductosPorMarca(array){
             <h2 class="productName"> ${producto.tipoProducto}</h2>
             <h1 class="producto">  ${producto.nombre} - SKU: ${producto.id}</h1>
             <span class="price"> $${producto.precio}>
-            <button type="button" class="agregarAlCarro">Añade al carrito </button>
+            <button data-id="${producto.id}" class="buttonCTA"> Agregar al carro </button>
          `
         productContainer.append(item)
+        //Añade listeners al contenido generado dinámicamente
+        listenersContenidoGenerado(".buttonCTA", agregarProducto)
     })
     
 }
@@ -77,6 +77,76 @@ const botonesLista = document.querySelectorAll(".lista")
 botonesLista.forEach((botonlista) =>{
     botonlista.addEventListener("click", mostrarProductos)
 })
+
+//Añadir al Carro
+
+const agregarProducto = (e) =>{
+    const productoElegido = e.target.getAttribute("data-id")
+    const producto = todosMisProductos.find((prod) => prod.id == productoElegido)
+    carro.push(producto)
+    console.log(carro)
+}
+
+
+//Añade Listeners al contenido generado dinámicamente
+function listenersContenidoGenerado(clase, funcion){
+
+    const botonesCompra = document.querySelectorAll(clase)
+    botonesCompra.forEach((botonCompra) => {
+        botonCompra.addEventListener("click", funcion)
+    })
+
+}
+    
+
+//listar Carro
+
+function listarCarro(){
+    productContainer.innerHTML =""
+    carro.forEach((producto) => {
+        
+        const item = document.createElement("div")
+        item.className = "productsCarrito"
+        item.innerHTML =`         
+            <img src="${producto.imagen}" class="productImg">
+            <h2 class="productName"> ${producto.tipoProducto}</h2>
+            <h1 class="producto">  ${producto.nombre} - SKU: ${producto.id}</h1>
+            <span class="price"> $${producto.precio}>
+            <button data-id="${producto.id}" class="buttonEliminar"> Eliminar Del Carro </button>
+         `
+        productContainer.append(item)
+        //Añade listeners al contenido generado dinámicamente
+        listenersContenidoGenerado(".buttonEliminar", eliminarDelCarro)
+    })
+    
+}
+
+const eliminarDelCarro = (e) => {
+const producto = e.target.getAttribute("data-id")
+const productoAEliminar = todosMisProductos.find((product) => product.id == producto)
+carro.shift(producto)
+listarCarro()
+
+}
+
+const botCarro = document.getElementById("carro")
+
+function mostrarCarro(){
+    listarCarro()
+}
+
+botCarro.addEventListener("click", mostrarCarro)
+
+
+
+
+
+
+
+
+
+
+
 
 
 //llena mi array con los productos creados

@@ -9,9 +9,8 @@
 </head>
 <body>
     
-       
     <div class="header">
-        <div id="titulo" id="titulo">
+        <div id="titulo" >
             <h1>Nombre de la tienda</h1>
         </div>
 
@@ -23,36 +22,65 @@
             <h1>Historial de COMPRA</h1>
         </div>
 
-        <div id="carroDeCompra" class="carro">
-            <span class="carrito">CARRO</a></span>
+        <div id="carroDeCompra" class="contenedorCarrito">
+            <input type="image" src="sources/carro.svg" class="carro" id="carro">
+            <!---<img src="sources/carro.svg" data-id="Carro" class="carrito"/>-->
         </div>
+
     </div>
        
     <div class="main">
-        <nav class="navegar">
-            <ul class="navbar">
-                <ul class="menuProductos">
-                    <li data-id="playStation" class="lista">PlayStation</li>
-                    <li data-id="xbox" class="lista">XBOX</li>
-                    <li data-id="nintendo" class="lista">Nintendo</li>     
-                </ul>
-                    
-            </ul>
+
+        <nav class="navbar">
+
+            <button type="button" class="menuProductos" id="menuConsolas"> CONSOLAS </button>
+
+            <div class="mostradorDeOpciones" id="sectorConsolas" data-id="sectorConsolas">
+        
+                <button type="button" data-id="playStation" class="lista">PLAYSTATION</button>
+                <button type="button" data-id="xbox" class="lista">XBOX</button>
+                <button type="button" data-id="nintendo" class="lista">NINTENDO</button>  
+
+            </div>
+            
+            <button type="button" class="menuProductos" id="menuVideojuegos"> VIDEOJUEGOS </button>
+
+            <div class="mostradorDeOpciones" id="sectoVideoJuegos" data-id="sectorConsolas">
+        
+                <button type="button" data-id="playStation" class="lista">PLAYSTATION</button>
+                <button type="button" data-id="xbox" class="lista">XBOX</button>
+                <button type="button" data-id="nintendo" class="lista">NINTENDO</button>  
+
+            </div>
+
+            <button type="button" class="menuProductos" id="menuAccesorios"> ACCESORIOS </button>
+
+            <div class="mostradorDeOpciones" id="sectorAccesorios" data-id="sectorConsolas">
+        
+                <button type="button" data-id="playStation" class="lista">PLAYSTATION</button>
+                <button type="button" data-id="xbox" class="lista">XBOX</button>
+                <button type="button" data-id="nintendo" class="lista">NINTENDO</button>  
+
+            </div>
+
+            <button type="button" class="menuProductos" id="menuOtros"> Otros </button>
+            
         </nav>
     
         <div id="contentContainer" class="contentContainer">
                 <!---Se inserta dinamicamente JS -->
+
         </div>
     
 
     </div>
 
-    <div id="footer "class="footer">
-            <!---Se inserta dinamicamente JS -->
-    </div>
-
+    <div class="footer" id="footer">
+        <!---Se inserta dinamicamente JS -->
 
     </div>
+    
+
     <script src="app/fabricante.js"></script>
     <script src="app/consola.js"></script>
     <script src="app/juego.js"></script>
