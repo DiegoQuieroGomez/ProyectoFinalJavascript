@@ -2,8 +2,7 @@
 
 //Declarraciones
 
-const consolas = [consola1a,consola1b,consola1c,consola1d,consola1f,consola1g,consola2a,
-    consola2b,consola2c,consola2d,consola2e,consola2f,consola3a,consola3b,consola3c,consola3d,
+const consolas = [consola1a,consola1b,consola1c,consola1d,consola1f,consola1g,consola2a,consola2b,consola2e,consola2f,consola3a,consola3b,consola3c,consola3d,
     consola3e,consola3f]
 
 const juegos = [juego1a,juego1b,juego1c,juego1d,juego1e,juego1f,juego2a,juego2b,juego2c,juego2d,
@@ -15,9 +14,9 @@ const carro = []
 
 const historialDeBusqueda = []
 
-const todosMisProductos = []
+const todosMisProductos = [...consolas,...juegos]
 
-llenarArrayMisProductos(consolas,juegos)
+
 //<--------------------------------------------------------------------------------------------------------->
 
 //Query de elementos
@@ -138,26 +137,3 @@ function mostrarCarro(){
 botCarro.addEventListener("click", mostrarCarro)
 
 
-
-
-
-
-
-
-
-
-
-
-
-//llena mi array con los productos creados
-function llenarArrayMisProductos(primerArray, segundoArray){
-    primerArray.forEach((producto) => {
-            todosMisProductos.push(producto)
-    })
-    
-    segundoArray.forEach((producto) => {
-            todosMisProductos.push(producto)
-    
-    })
-}  
-//EJECUCIONES
