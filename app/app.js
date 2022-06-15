@@ -53,8 +53,7 @@ function listarProductosPorMarca(array){
         item.className = "product"
         item.innerHTML =`         
             <img src="${producto.imagen}" class="productImg">
-            <h2 class="productName"> ${producto.tipoProducto}</h2>
-            <h1 class="producto">  ${producto.nombre} - SKU: ${producto.id}</h1>
+            <h2 class="productName"> ${producto.tipoProducto} ${producto.nombre} </h2>
             <span class="price"> $${producto.precio}>
             <button data-id="${producto.id}" class="buttonCTA"> Agregar al carro </button>
          `

@@ -46,24 +46,37 @@ body{
 }
 
 .product{
-   
+    background-color: royalblue;
     width: 20%;
+    height: 300px;
     border-radius: 20px;
     padding: 20px 10px;
     text-align: center;
     border:solid 2px slateblue;
-
+    display: block;
 
 }
 
 .productImg{
-    width: 60%;
-    height: 40%;
+    width: 140px;
+    height: 120px;
     background-color: black;
     border-radius: 5px;
 }
 
+.productName {
+    display: inline;
+    width: 10px;
+    height: 80px;
 
+
+}
+
+
+.price{
+
+
+}
 
 
 /*
