@@ -54,7 +54,7 @@ function listarProductosPorMarca(array){
         item.innerHTML =`         
             <img src="${producto.imagen}" class="productImg">
             <h2 class="productName"> ${producto.tipoProducto} ${producto.nombre} </h2>
-            <span class="price"> $${producto.precio}>
+            <span class="productPrice"> $ ${producto.precio} </span>
             <button data-id="${producto.id}" class="buttonCTA"> Agregar al carro </button>
          `
         productContainer.append(item)
