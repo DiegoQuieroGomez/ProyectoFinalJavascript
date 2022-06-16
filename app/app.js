@@ -107,7 +107,6 @@ botCarro.addEventListener("click", listarCarro)
 
 //Añade Listeners al contenido generado dinámicamente
 function listenersContenidoGenerado(clase, funcion){
-
     const botonesCompra = document.querySelectorAll(clase)
     botonesCompra.forEach((botonCompra) => {
         botonCompra.addEventListener("click", funcion)
@@ -177,8 +176,8 @@ function listarCarro(){
 
 const eliminarDelCarro = (e) => {
 const producto = e.target.getAttribute("data-id")
-const productoAEliminar = todosMisProductos.find((product) => product.id == producto)
-carro.shift(producto)
+carro = carro.filter((product) => product.id != producto)
+console.log(carro)
 listarCarro()
 
 }

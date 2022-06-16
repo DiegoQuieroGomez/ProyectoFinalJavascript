@@ -4,18 +4,11 @@ body{
     height: auto;
 }
 
-.header{
-    display: block;
-    width: 100%;
-    height: 20%;
-    margin: 10px;
-}
-
 .main{
     width: 100%;
     height: 70%;
     display: flex;
-    margin-left: 10px;
+    margin-left: 2px;
 }
 
 .navegar{   
@@ -41,7 +34,7 @@ body{
 
 /*----------------------------------Contenedor productos------------------------*/
 .contentContainer{
-    width: 80%;
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
     margin-left: 20px;
@@ -62,8 +55,8 @@ body{
 
 .productImg{
     border: solid 2px rgb(0, 0, 0);
-    width: 140px;
-    height: 120px;
+    width: 100px;
+    height: 90px;
     background-color: black;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -72,10 +65,11 @@ body{
 .productName {
     display: block;
     color:whitesmoke;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .productPrice{
+    margin-top: 20px;
     text-align: justify;
     color: darkgoldenrod;
     font-size: 20px;
@@ -87,9 +81,10 @@ body{
 }
 
 .buttonCTA{
-    margin-top: 20px;
+    
+    margin-top: 40px;
     background-color: crimson;
-    font-size: 15px;
+    font-size: 12px;
     border-radius: 3px;
     border: static 3px grey;
 }
@@ -166,7 +161,6 @@ body{
     height: 50px;
     margin-top: 10px;
 
-
 }
 
 /* Historial de compra*/
@@ -184,80 +178,20 @@ body{
 
 }
 
-/*
-.nav{
-    display: block;
-    position: static;
-    float: left;
-    width: 18%;
-    text-align: left;
-    border: solid brown;
+.header{
+    width: 100%;
+    height: 30%;
+    margin-left: 2px;
+    
 
 }
 
-.navbar{
-    display: block;
-    width: 90%;
-
+.contenedorOpcionesSuperiores{
+    text-align: right;
+    
 }
 
+.opcionSuperior{
+    width: 30px;
 
-
-.productContainer{
-    display: flex;
-    position: static;
-    flex-wrap: wrap;
-    float: right;
-    width: 70%;
-    border-radius: 15px;
-    border-color: blueviolet ;
 }
-
-
-/* targetitas */
-
-/*
-.cardContainer {
-    display: flex;
-    justify-content: right;
-    width: 70%;
-}
-
-.card {
-    width: 25%;
-    padding: 20px 10px;
-    border: 2px solid rgb(115, 16, 16);
-    border-radius: 30px;
-}
-
-.cardImg {
-    width: 70%;
-}
-
-.cardPrice {
-    display: block;
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.buttonCTA {
-    margin: 10px 0;
-    background-color: rgb(73, 157, 17);
-    color: rgb(247, 247, 247);
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.buttonCTA:hover {
-    background-color: rgb(235, 216, 44);
-    box-shadow: 1px 1px 10px lightgrey;
-}
-
-/* Buscadores*/
-
-
