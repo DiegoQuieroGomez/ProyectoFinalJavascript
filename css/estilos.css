@@ -39,10 +39,12 @@ body{
     border: rgb(150, 52, 52);
 }
 
+/*----------------------------------Contenedor productos------------------------*/
 .contentContainer{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 20px;
 }
 
 .product{
@@ -90,6 +92,96 @@ body{
     font-size: 15px;
     border-radius: 3px;
     border: static 3px grey;
+}
+
+/*<----------------------------------------Contenedor carro---------------------------------->*/
+
+.productsCarrito{
+    background-color: rgb(129, 59, 71);
+    margin: 3px;
+    width: 70%;
+    height: 90px;
+    border-radius: 30px;
+    padding: 20px 10px;
+    text-align: center;
+    border:solid 2px rgb(82, 86, 138);
+    display: flex;
+    
+}
+
+.finalizarCompra{
+    display: block;
+    width: 70%;
+    height: 50px;
+    border-radius:30px; 
+  
+    text-align: center;
+
+}
+
+.pagar{
+    margin-top: 10px;
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    color: darkorange;
+    border: solid 3px rgb(187, 12, 12);
+
+}
+
+.productImg2{
+    border: solid 2px rgb(211, 214, 37);
+    width: 100px;
+    height: 80px;
+    background-color: black;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+
+.producto{
+    
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.productPrice2{
+    margin-top: 25px;
+    color: rgb(37, 37, 35);   
+    font-size: 20px;
+    font-weight: 200px;
+    background-color: rgb(206, 25, 25);
+    border-radius: 2px;
+    border: solid 2px rgb(24, 24, 24);
+    height: 25px;
+    margin-right: 20px;
+}
+
+.buttonEliminar{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+
+
+}
+
+/* Historial de compra*/
+
+.historialDeCompra{
+    background-color: rgb(129, 59, 71);
+    margin: 3px;
+    width: 50%;
+    height: 90px;
+    border-radius: 30px;
+    padding: 20px 10px;
+    text-align: center;
+    border:solid 2px rgb(82, 86, 138);
+    display: flex;
+
 }
 
 /*

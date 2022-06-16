@@ -27,9 +27,19 @@ const todosMisProductos = [...consolas,...juegos]
 
 const cardContainer = document.querySelector("#cardContainer")
 const productContainer = document.querySelector("#contentContainer")
+const botonesLista = document.querySelectorAll(".lista")
+const historialDeCompra = document.getElementById("historial")
+const botCarro = document.getElementById("carro")
 
-//Funciones
+//<------------------------Funciones------------------------------------->
 
+//Confirma evento escuchado
+const mostrarNombre = () =>{
+    console.log("evento Escuchado")
+}
+
+
+//Muestra ofertas
 function mostrarOfertas(){
     ofertas.forEach((producto) => {
         const card = document.createElement("div")
@@ -45,9 +55,7 @@ function mostrarOfertas(){
     })
 }
 
-const mostrarNombre = () =>{
-    console.log("evento Escuchado")
-}
+//Lista productos dependiendo de la marca
 
 function listarProductosPorMarca(array){
     productContainer.innerHTML =""
@@ -75,13 +83,9 @@ const mostrarProductos = (e) => {
 }
 
 
-const botonesLista = document.querySelectorAll(".lista")
-botonesLista.forEach((botonlista) =>{
-    botonlista.addEventListener("click", mostrarProductos)
-})
+
 
 //Añadir al Carro
-
 const agregarProducto = (e) =>{
     const productoElegido = e.target.getAttribute("data-id")
     const producto = todosMisProductos.find((prod) => prod.id == productoElegido)
@@ -89,6 +93,17 @@ const agregarProducto = (e) =>{
     console.log(carro)
 }
 
+
+//<--------------------------------Listeners----------------------------------------->
+
+botonesLista.forEach((botonlista) =>{
+    botonlista.addEventListener("click", mostrarProductos)
+})
+
+
+historialDeCompra.addEventListener("click",ultimaCompra)
+
+botCarro.addEventListener("click", listarCarro)
 
 //Añade Listeners al contenido generado dinámicamente
 function listenersContenidoGenerado(clase, funcion){
@@ -110,32 +125,26 @@ function ultimaCompra(){
         compraPrevia.forEach((producto) =>{
             
             const ultima = document.createElement("div")
-            ultima.className = " productHistorial"
+            ultima.className = "historialDeCompra"
             ultima.innerHTML = `
-                <img src="${producto.imagen}" class="productImg">
-                <h2 class="productName"> ${producto.tipoProducto}</h2>
-                <h1 class="producto">  ${producto.nombre} - SKU: ${producto.id}</h1>
-                <span class="price"> $${producto.precio}>
+                <img src="${producto.imagen}" class="productImg2">
+                <h1 class="producto"> ${producto.tipoProducto} ${producto.nombre} - SKU: ${producto.id}</h1>
+                
             `
             productContainer.append(ultima)
 
         })
 
     }else{
-        const ultima = document.createElement("div")
-        ultima.className = " productHistorial"
-        ultima.innerHTML = `
+        const ultima1 = document.createElement("div")
+        ultima1.className = " productHistorial"
+        ultima1.innerHTML = `
             <h1> No tenemos registros de compras previas. Bienvenido!! </h1>
         `
+        productContainer.append(ultima1)
     }
-    
-
 
 }
-
-const historialDeCompra = document.getElementById("historial")
-historialDeCompra.addEventListener("click",ultimaCompra)
-
 
 //listar Carro
 
@@ -146,11 +155,10 @@ function listarCarro(){
         const item = document.createElement("div")
         item.className = "productsCarrito"
         item.innerHTML =`         
-            <img src="${producto.imagen}" class="productImg">
-            <h2 class="productName"> ${producto.tipoProducto}</h2>
-            <h1 class="producto">  ${producto.nombre} - SKU: ${producto.id}</h1>
-            <span class="price"> $${producto.precio}>
-            <button data-id="${producto.id}" class="buttonEliminar"> Eliminar Del Carro </button>
+            <img src="${producto.imagen}" class="productImg2">
+            <h1 class="producto"> ${producto.tipoProducto} ${producto.nombre} - SKU: ${producto.id}</h1>
+            <span class="productPrice2"> $${producto.precio}</span>
+            <input type="image" src="sources/trash.svg" data-id="${producto.id}" class="buttonEliminar">
          `
         productContainer.append(item)
         //Añade listeners al contenido generado dinámicamente
@@ -174,16 +182,6 @@ carro.shift(producto)
 listarCarro()
 
 }
-
-const botCarro = document.getElementById("carro")
-
-function mostrarCarro(){
-    listarCarro()
-    
-
-}
-
-botCarro.addEventListener("click", mostrarCarro)
 
 const pagar = () =>{
 
