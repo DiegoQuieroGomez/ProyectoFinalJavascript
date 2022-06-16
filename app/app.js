@@ -2,15 +2,19 @@
 
 //Declarraciones
 
-const consolas = [consola1a,consola1b,consola1c,consola1d,consola1f,consola1g,consola2a,consola2b,consola2e,consola2f,consola3a,consola3b,consola3c,consola3d,
-    consola3e,consola3f]
+const consolas = [consola1a,consola1b,consola1c,consola1d,consola1f,consola1g,consola2a,consola2b,consola2e,
+    consola2f,consola3a,consola3b,consola3c,consola3d,consola3e,consola3f]
 
 const juegos = [juego1a,juego1b,juego1c,juego1d,juego1e,juego1f,juego1g,juego2a,juego2b,juego2c,juego2d,
     juego2e,juego2f,juego2g,juego3a,juego3b,juego3c,juego3d,juego3e,juego3f,juego3g]
 
 const ofertas = [consola1a,consola1b,consola1c,consola1d]
 
-const carro = []
+let carro = []
+
+let compraPrevia = []
+
+compraPrevia = JSON.parse(localStorage.getItem('historialDeCompra'))
 
 const historialDeBusqueda = []
 
@@ -96,6 +100,42 @@ function listenersContenidoGenerado(clase, funcion){
 
 }
     
+//Verificar Ultima Compra
+
+function ultimaCompra(){
+
+    if (localStorage.getItem('historialDeCompra')){
+       productContainer.innerHTML = ""
+        compraPrevia = JSON.parse(localStorage.getItem('historialDeCompra'))
+        compraPrevia.forEach((producto) =>{
+            
+            const ultima = document.createElement("div")
+            ultima.className = " productHistorial"
+            ultima.innerHTML = `
+                <img src="${producto.imagen}" class="productImg">
+                <h2 class="productName"> ${producto.tipoProducto}</h2>
+                <h1 class="producto">  ${producto.nombre} - SKU: ${producto.id}</h1>
+                <span class="price"> $${producto.precio}>
+            `
+            productContainer.append(ultima)
+
+        })
+
+    }else{
+        const ultima = document.createElement("div")
+        ultima.className = " productHistorial"
+        ultima.innerHTML = `
+            <h1> No tenemos registros de compras previas. Bienvenido!! </h1>
+        `
+    }
+    
+
+
+}
+
+const historialDeCompra = document.getElementById("historial")
+historialDeCompra.addEventListener("click",ultimaCompra)
+
 
 //listar Carro
 
@@ -116,7 +156,15 @@ function listarCarro(){
         //Añade listeners al contenido generado dinámicamente
         listenersContenidoGenerado(".buttonEliminar", eliminarDelCarro)
     })
-    
+    //Boton finaliza compra al final del Carro
+    const finalizarCompra = document.createElement("div")
+    finalizarCompra.className = "finalizarCompra"
+    finalizarCompra.innerHTML = `
+        <button class= "pagar" data-id="pagar">Pagar</button>
+    `
+    productContainer.append(finalizarCompra)
+    listenersContenidoGenerado(".pagar",pagar)
+
 }
 
 const eliminarDelCarro = (e) => {
@@ -131,8 +179,27 @@ const botCarro = document.getElementById("carro")
 
 function mostrarCarro(){
     listarCarro()
+    
+
 }
 
 botCarro.addEventListener("click", mostrarCarro)
 
+const pagar = () =>{
+
+    let total = 0
+    for(i=0;i < carro.length;i++){ 
+        total = total + carro[i].precio
+    }
+    //Pretendo cambiarlo por un Pop Up o Dialog que estuve viendo
+    const alBanco = confirm("Desea ir a la pagina del Banco?")
+    
+    if (alBanco == true) {
+        const historial = JSON.stringify(carro)
+        localStorage.setItem('historialDeCompra',historial)
+        carro = []
+        productContainer.innerHTML = ""
+    }
+    
+}
 
