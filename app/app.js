@@ -16,6 +16,8 @@ let compraPrevia = []
 
 compraPrevia = JSON.parse(localStorage.getItem('historialDeCompra'))
 
+let guardarCompra = []
+
 const historialDeBusqueda = []
 
 const todosMisProductos = [...consolas,...juegos]
@@ -72,6 +74,7 @@ function listarProductosPorMarca(array){
         productContainer.append(item)
         //Añade listeners al contenido generado dinámicamente
         listenersContenidoGenerado(".buttonCTA", agregarProducto)
+       
     })
     
 }
@@ -90,8 +93,13 @@ const agregarProducto = (e) =>{
     const productoElegido = e.target.getAttribute("data-id")
     const producto = todosMisProductos.find((prod) => prod.id == productoElegido)
     carro.push(producto)
-    console.log(carro)
+    guardarCompra = JSON.stringify(carro)
+    localStorage.setItem("guardarCompra", guardarCompra)
+    console.log(producto)
 }
+
+
+
 
 
 //<--------------------------------Listeners----------------------------------------->
@@ -100,10 +108,30 @@ botonesLista.forEach((botonlista) =>{
     botonlista.addEventListener("click", mostrarProductos)
 })
 
-
 historialDeCompra.addEventListener("click",ultimaCompra)
 
 botCarro.addEventListener("click", listarCarro)
+
+/*
+window.addEventListener("beforeunload", (e)=>{
+    e.preventDefault()
+    Swal.fire({
+        title: 'Do you want to save the changes?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Save',
+        denyButtonText: `Don't save`,
+      }).then((result) => {
+        // Read more about isConfirmed, isDenied below //
+        if (result.isConfirmed) {
+          
+        } else if (result.isDenied) {
+          
+        }
+      })
+    
+})
+*/
 
 //Añade Listeners al contenido generado dinámicamente
 function listenersContenidoGenerado(clase, funcion){
@@ -164,6 +192,7 @@ function listarCarro(){
         listenersContenidoGenerado(".buttonEliminar", eliminarDelCarro)
     })
     //Boton finaliza compra al final del Carro
+    
     const finalizarCompra = document.createElement("div")
     finalizarCompra.className = "finalizarCompra"
     finalizarCompra.innerHTML = `
@@ -188,15 +217,34 @@ const pagar = () =>{
     for(i=0;i < carro.length;i++){ 
         total = total + carro[i].precio
     }
-    //Pretendo cambiarlo por un Pop Up o Dialog que estuve viendo
-    const alBanco = confirm("Desea ir a la pagina del Banco?")
-    
-    if (alBanco == true) {
-        const historial = JSON.stringify(carro)
-        localStorage.setItem('historialDeCompra',historial)
-        carro = []
-        productContainer.innerHTML = ""
-    }
-    
+
+    Swal.fire({
+        title: '¿Deseas ir a la página del banco?',
+        text: "Dejaremos tu carrito intacto si quieres ir mas tarde",
+        icon: 'question',
+        iconColor:"yellow",
+        width:"20%",
+        background:"black",
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, vamos al Banco'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            
+            const historial = JSON.stringify(carro)
+            localStorage.setItem('historialDeCompra',historial)
+            carro = []
+            productContainer.innerHTML = ""  
+
+            Swal.fire(
+            'Pago exitoso',
+            'Gracias por tu compra',
+            'success'
+            )
+        }
+      })
+
+
 }
 
