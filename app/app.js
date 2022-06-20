@@ -112,9 +112,15 @@ historialDeCompra.addEventListener("click",ultimaCompra)
 
 botCarro.addEventListener("click", listarCarro)
 
-/*
-window.addEventListener("beforeunload", (e)=>{
+
+window.addEventListener("onbeforeunload", (e)=>{
     e.preventDefault()
+
+    confirm("seguro deseas salir?")
+
+
+
+   /*
     Swal.fire({
         title: 'Do you want to save the changes?',
         showDenyButton: true,
@@ -129,9 +135,9 @@ window.addEventListener("beforeunload", (e)=>{
           
         }
       })
-    
+    */
 })
-*/
+
 
 //Añade Listeners al contenido generado dinámicamente
 function listenersContenidoGenerado(clase, funcion){

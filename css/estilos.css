@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
 body{
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #1f4037, #99f2c8);
     width: auto;
     height: auto;
@@ -11,25 +15,61 @@ body{
     margin-left: 2px;
 }
 
-.navegar{   
-    background-color: blue;
-    width: 20%;
-    height:100%;
-    justify-content: left;
+.navbar{
+
+    width: 250px;
+    background-color: rgb(255, 254, 254);
 }
 
-.navbar{
-    margin: 2px;
-    background-color: cadetblue;
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 0 16px;
+    
+}
+
+.list_item{
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    /*overflow: hidden;*/
+}
+
+.list_show{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+    transition: height .4s;
+    /*height: 0;*/
+
+}
+
+.list_arrow{
+
+    margin-left: auto;
 }
 
 .lista{
-    width: 30%;
-    margin: 2%;
-    background-color: rgb(186, 186, 23);
-    text-align: left;
-    border-radius: 10px;
-    border: rgb(150, 52, 52);
+    width: 80px;
+    height: 20px;
+    border-radius: 3px;
+    text-align:center;
+    font-size: 10px;
+    color: #303440;
+    display: block;
+    text-decoration: none;
+     
+    
+}
+
+.lista:hover{
+    background-color: #2b50bd;
 }
 
 /*----------------------------------Contenedor productos------------------------*/
