@@ -29,80 +29,119 @@
        
     <div class="main">
 
-        <nav class="navbar">
-
-            <h1 class="tituloMenu">productos</h1>
+        <nav class="nav">
 
             <ul class="list">
 
                 <li class="list_item">
-                    <div class="list_button">
+
+                    <div class="list_button"> 
+
+                        <h1 class="tituloMenu">productos</h1>
+
+                    </div>
+                    
+                </li>
+
+               <li class="list_item list_item--click">
+                     
+                    <div class="list_button list_button--click">
                         <span class="list_name">Consolas</span>
                         <img src="sources/arrow.svg" class="list_arrow">
                     </div>
 
+                    <ul class="list_show" id="sectorConsolas" data-id="sectorConsolas">
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/ps.svg" data-id="playStation" class="lista"> 
+                        </li>
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
+                        </li>
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
+                        </li>
+
+                    </ul>
 
                 </li>
-
-                <ul class="list_show" id="sectorConsolas" data-id="sectorConsolas">
-            
-                    <input type="image" src="sources/ps.svg" data-id="playStation" class="lista">
-                    <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
-                    <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
-
-                </ul>
                 
-                
-                <li class="list_item">
-                    <div class="list_button">
+                <li class="list_item list_item--click">
+                     
+                    <div class="list_button list_button--click">
                         <span class="list_name">Juegos</span>
                         <img src="sources/arrow.svg" class="list_arrow">
                     </div>
 
+                    <ul class="list_show" id="sectorJuegos" data-id="sectorJuegos">
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/ps.svg" data-id="playStation" class="lista"> 
+                        </li>
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
+                        </li>
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
+                        </li>
+
+                    </ul>
+
                 </li>
-
-                <ul class="list_show" id="sectorJuegos" data-id="sectorJuegos">
-            
-                    <button type="button" data-id="playStation" class="lista">PLAYSTATION</button>
-                    <button type="button" data-id="xbox" class="lista">XBOX</button>
-                    <button type="button" data-id="nintendo" class="lista">NINTENDO</button>  
-
-                </ul>
-                
-                
-                <li class="list_item">
-                    <div class="list_button">
+                <li class="list_item list_item--click">
+                     
+                    <div class="list_button list_button--click">
                         <span class="list_name">Accesorios</span>
                         <img src="sources/arrow.svg" class="list_arrow">
                     </div>
 
+                    <ul class="list_show" id="sectorAccesorios" data-id="sectorAccesorios">
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/ps.svg" data-id="playStation" class="lista"> 
+                        </li>
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
+                        </li>
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
+                        </li>
+
+                    </ul>
+
                 </li>
 
-                <ul class="list_show" id="sectorAccesorios" data-id="sectorAccesorios">
-            
-                    <button type="button" data-id="playStation" class="lista">PLAYSTATION</button>
-                    <button type="button" data-id="xbox" class="lista">XBOX</button>
-                    <button type="button" data-id="nintendo" class="lista">NINTENDO</button>  
-
-                </ul>
-                
-                
-                <li class="list_item">
-                    <div class="list_button">
-                        <span class="list_name">otros</span>
+                <li class="list_item list_item--click">
+                     
+                    <div class="list_button list_button--click">
+                        <span class="list_name">Otros</span>
                         <img src="sources/arrow.svg" class="list_arrow">
                     </div>
 
+                    <ul class="list_show" id="sectorOtros" data-id="sectorOtros">
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/ps.svg" data-id="playStation" class="lista"> 
+                        </li>
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
+                        </li>
+
+                        <li class="list_inside">
+                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
+                        </li>
+
+                    </ul>
 
                 </li>
-
-                <ul class="list_show" id="sectorOtros" data-id="sectorOtros">
-            
-                    <button type="button" data-id="playStation" class="lista">PLAYSTATION</button>
-                    <button type="button" data-id="xbox" class="lista">XBOX</button>
-                    <button type="button" data-id="nintendo" class="lista">NINTENDO</button>  
-
-                </ul>
+                
                 
 
             </ul>
@@ -130,5 +169,6 @@
     <script src="app/consola.js"></script>
     <script src="app/juego.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/appCss.js"></script>
 </body>
 </html> 
