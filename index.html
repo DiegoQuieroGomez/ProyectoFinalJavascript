@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <title>Video Juegos</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
-    
+
     <div class="header" id="header">
-        
-        <div id="titulo" class="titulo" >
+
+        <div id="titulo" class="titulo">
             <h1>DIGISTORE</h1>
         </div>
 
@@ -21,12 +23,12 @@
 
         <div id="carroDeCompra" class="contenedorOpcionesSuperiores">
             <input type="image" src="sources/carro.svg" class="opcionSuperior" id="carro" alt="Carro">
-        
+
             <input type="image" src="sources/history.svg" class="opcionSuperior" id="historial" alt="Ultima Compra">
         </div>
 
     </div>
-       
+
     <div class="main">
 
         <nav class="nav">
@@ -35,16 +37,16 @@
 
                 <li class="list_item">
 
-                    <div class="list_button"> 
+                    <div class="list_button">
 
                         <h1 class="tituloMenu">productos</h1>
 
                     </div>
-                    
+
                 </li>
 
-               <li class="list_item list_item--click">
-                     
+                <li class="list_item list_item--click">
+
                     <div class="list_button list_button--click">
                         <span class="list_name">Consolas</span>
                         <img src="sources/arrow.svg" class="list_arrow">
@@ -53,23 +55,24 @@
                     <ul class="list_show" id="sectorConsolas" data-id="sectorConsolas">
 
                         <li class="list_inside">
-                            <input type="image" src="sources/ps.svg" data-id="playStation" class="lista"> 
+
+                            <input type="image" src="sources/ps.svg" data-id="playStation" class="listaConsola" >
                         </li>
 
                         <li class="list_inside">
-                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
+                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="listaConsola">
                         </li>
 
                         <li class="list_inside">
-                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
+                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="listaConsola">
                         </li>
 
                     </ul>
 
                 </li>
-                
+
                 <li class="list_item list_item--click">
-                     
+
                     <div class="list_button list_button--click">
                         <span class="list_name">Juegos</span>
                         <img src="sources/arrow.svg" class="list_arrow">
@@ -78,22 +81,22 @@
                     <ul class="list_show" id="sectorJuegos" data-id="sectorJuegos">
 
                         <li class="list_inside">
-                            <input type="image" src="sources/ps.svg" data-id="playStation" class="lista"> 
+                            <input type="image" src="sources/ps.svg" data-id="playStation" class="listaJuego">
                         </li>
 
                         <li class="list_inside">
-                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
+                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="listaJuego">
                         </li>
 
                         <li class="list_inside">
-                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
+                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="listaJuego">
                         </li>
 
                     </ul>
 
                 </li>
                 <li class="list_item list_item--click">
-                     
+
                     <div class="list_button list_button--click">
                         <span class="list_name">Accesorios</span>
                         <img src="sources/arrow.svg" class="list_arrow">
@@ -102,15 +105,15 @@
                     <ul class="list_show" id="sectorAccesorios" data-id="sectorAccesorios">
 
                         <li class="list_inside">
-                            <input type="image" src="sources/ps.svg" data-id="playStation" class="lista"> 
+                            <input type="image" src="sources/ps.svg" data-id="playStation" class="listaAccesorio">
                         </li>
 
                         <li class="list_inside">
-                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
+                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="listaAccesorio">
                         </li>
 
                         <li class="list_inside">
-                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
+                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="listaAccesorio">
                         </li>
 
                     </ul>
@@ -118,7 +121,7 @@
                 </li>
 
                 <li class="list_item list_item--click">
-                     
+
                     <div class="list_button list_button--click">
                         <span class="list_name">Otros</span>
                         <img src="sources/arrow.svg" class="list_arrow">
@@ -127,33 +130,33 @@
                     <ul class="list_show" id="sectorOtros" data-id="sectorOtros">
 
                         <li class="list_inside">
-                            <input type="image" src="sources/ps.svg" data-id="playStation" class="lista"> 
+                            <input type="image" src="sources/ps.svg" data-id="playStation" class="listaOtro">
                         </li>
 
                         <li class="list_inside">
-                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="lista">
+                            <input type="image" src="sources/xbox1.svg" data-id="xbox" class="listaOtro">
                         </li>
 
                         <li class="list_inside">
-                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="lista">
+                            <input type="image" src="sources/nintendo.svg" data-id="nintendo" class="listaOtro">
                         </li>
 
                     </ul>
 
                 </li>
-                
-                
+
+
 
             </ul>
-            
-            
+
+
         </nav>
-    
+
         <div id="contentContainer" class="contentContainer">
-                <!---Se inserta dinamicamente JS -->
+            <!---Se inserta dinamicamente JS -->
 
         </div>
-    
+
 
     </div>
 
@@ -161,7 +164,7 @@
         <!---Se inserta dinamicamente JS -->
 
     </div>
-    
+
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -171,4 +174,5 @@
     <script src="app/app.js"></script>
     <script src="app/appCss.js"></script>
 </body>
-</html> 
+
+</html>

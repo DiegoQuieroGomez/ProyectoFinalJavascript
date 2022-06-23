@@ -1,6 +1,6 @@
 
 
-//Declarraciones
+//Declaraciones
 
 const consolas = [consola1a,consola1b,consola1c,consola1d,consola1f,consola1g,consola2a,consola2b,consola2e,
     consola2f,consola3a,consola3b,consola3c,consola3d,consola3e,consola3f]
@@ -8,12 +8,16 @@ const consolas = [consola1a,consola1b,consola1c,consola1d,consola1f,consola1g,co
 const juegos = [juego1a,juego1b,juego1c,juego1d,juego1e,juego1f,juego1g,juego2a,juego2b,juego2c,juego2d,
     juego2e,juego2f,juego2g,juego3a,juego3b,juego3c,juego3d,juego3e,juego3f,juego3g]
 
+const accesorios = []
+
+const otros = []
+
 const ofertas = [consola1a,consola1b,consola1c,consola1d]
 
 let carro = []
 
+//Array Ultima Compra en Local Storage
 let compraPrevia = []
-
 compraPrevia = JSON.parse(localStorage.getItem('historialDeCompra'))
 
 let guardarCompra = []
@@ -29,7 +33,6 @@ const todosMisProductos = [...consolas,...juegos]
 
 const cardContainer = document.querySelector("#cardContainer")
 const productContainer = document.querySelector("#contentContainer")
-const botonesLista = document.querySelectorAll(".lista")
 const historialDeCompra = document.getElementById("historial")
 const botCarro = document.getElementById("carro")
 
@@ -57,7 +60,7 @@ function mostrarOfertas(){
     })
 }
 
-//Lista productos dependiendo de la marca
+//-----------------Lista productos dependiendo de la marca------------------------------------
 
 function listarProductosPorMarca(array){
     productContainer.innerHTML =""
@@ -79,14 +82,37 @@ function listarProductosPorMarca(array){
     
 }
 
-const mostrarProductos = (e) => {
+//<----------------------------------------Menu Desplegable-------------------------------------------------------->
+
+//Consolas
+const mostrarConsolas = (e) => {
+    const productosElegidos = e.target.getAttribute("data-id")
+    const productos = consolas.filter((productos) => productos.Fabricante.marca == productosElegidos)
+    listarProductosPorMarca(productos)
+}
+
+//Juegos
+const mostrarJuegos = (e) => {
+    const productosElegidos = e.target.getAttribute("data-id")
+    const productos = juegos.filter((productos) => productos.Fabricante.marca == productosElegidos)
+    listarProductosPorMarca(productos)
+}
+
+//Accesorios
+const mostrarAccesorios = (e) => {
     const productosElegidos = e.target.getAttribute("data-id")
     const productos = todosMisProductos.filter((productos) => productos.Fabricante.marca == productosElegidos)
     listarProductosPorMarca(productos)
 }
 
+//Otros
+const mostrarOtros = (e) => {
+    const productosElegidos = e.target.getAttribute("data-id")
+    const productos = todosMisProductos.filter((productos) => productos.Fabricante.marca == productosElegidos)
+    listarProductosPorMarca(productos)
+}
 
-
+//---------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Añadir al Carro
 const agregarProducto = (e) =>{
@@ -100,27 +126,20 @@ const agregarProducto = (e) =>{
 
 
 
-
-
 //<--------------------------------Listeners----------------------------------------->
 
-botonesLista.forEach((botonlista) =>{
-    botonlista.addEventListener("click", mostrarProductos)
-})
-
 historialDeCompra.addEventListener("click",ultimaCompra)
-
 botCarro.addEventListener("click", listarCarro)
 
 
+//INTENTO DE CONFIRMACION ANTES DE ACTUALIZAR O SALIR DEL NAVEGADOR*****************
+/*
 window.addEventListener("onbeforeunload", (e)=>{
     e.preventDefault()
 
     confirm("seguro deseas salir?")
 
-
-
-   /*
+   
     Swal.fire({
         title: 'Do you want to save the changes?',
         showDenyButton: true,
@@ -135,9 +154,9 @@ window.addEventListener("onbeforeunload", (e)=>{
           
         }
       })
-    */
+    
 })
-
+*/
 
 //Añade Listeners al contenido generado dinámicamente
 function listenersContenidoGenerado(clase, funcion){
@@ -147,7 +166,22 @@ function listenersContenidoGenerado(clase, funcion){
     })
 
 }
+
+//Listeners al Menú
+function listenerMenu(clase,funcion){
+    const botonesMenu = document.querySelectorAll(clase)
+    botonesMenu.forEach((botonesMenu) => {
+        botonesMenu.addEventListener("click", funcion)
+    })
     
+}
+//Ejecución Menú
+listenerMenu(".listaConsola",mostrarConsolas)
+listenerMenu(".listaJuego",mostrarJuegos)
+listenerMenu(".listaAccesorio",mostrarAccesorios)
+listenerMenu(".listaOtro",mostrarOtros)
+
+
 //Verificar Ultima Compra
 
 function ultimaCompra(){
@@ -216,7 +250,7 @@ console.log(carro)
 listarCarro()
 
 }
-
+//Confirmación de pago con SweetAlert
 const pagar = () =>{
 
     let total = 0

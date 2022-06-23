@@ -17,15 +17,15 @@ body{
 
 .nav{
 
-    width: 250px;
-    background-color: rgb(255, 254, 254);
+    width: 200px;
+    
 }
 
 .list{
-    width: 100%;
-    height: 100vh;
+    width: 80%;
+    height: 35vh;
     display: flex;
-    justify-content: center;
+    justify-content:start;
     flex-direction: column;
     border-radius: 0 16px 0 16px;
     background: #99f2c8;
@@ -67,7 +67,8 @@ body{
     transition: transform.3s;
 }
 
-.lista{
+/*Consolas*/
+.listaConsola{
     width: 80px;
     height: 20px;
     border-radius: 3px;
@@ -80,9 +81,68 @@ body{
     
 }
 
-.lista:hover{
+.listaConsola:hover{
     background-color: #2b50bd;
 }
+
+
+/*Juegos*/
+.listaJuego{
+    width: 80px;
+    height: 20px;
+    border-radius: 3px;
+    text-align:center;
+    font-size: 10px;
+    color: #303440;
+    display: block;
+    text-decoration: none;
+     
+    
+}
+
+.listaJuego:hover{
+    background-color: #2b50bd;
+}
+
+/*Accesorios*/
+.listaAccesorio{
+    width: 80px;
+    height: 20px;
+    border-radius: 3px;
+    text-align:center;
+    font-size: 10px;
+    color: #303440;
+    display: block;
+    text-decoration: none;
+     
+    
+}
+
+.listaAccesorio:hover{
+    background-color: #2b50bd;
+}
+
+/*Otros*/
+
+.listaOtro{
+    width: 80px;
+    height: 20px;
+    border-radius: 3px;
+    text-align:center;
+    font-size: 10px;
+    color: #303440;
+    display: block;
+    text-decoration: none;
+     
+    
+}
+
+.listaOtro:hover{
+    background-color: #2b50bd;
+}
+
+
+
 
 /*----------------------------------Contenedor productos------------------------*/
 .contentContainer{
