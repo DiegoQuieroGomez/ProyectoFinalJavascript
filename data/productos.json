@@ -1,0 +1,184 @@
+[
+    
+    {"id": 1 ,"nombre": "playStation", "marca": "psx",
+        "producto": [
+            {
+                "sku":1,
+                "tipoProducto": "consola",
+                "modelo":"cfi-1100b", 
+                "nombreProducto": "PS5", 
+                "color":"blanco",
+                "precio": 300000,
+                "imagen": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21" 
+            },
+            
+            {
+                "sku":2,
+                "tipoProducto": "consola",
+                "modelo":"cfi-1100b", 
+                "nombreProducto": "PS5", 
+                "color":"negro",
+                "precio":300000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJ8efRbsygB31fjs-oMq0GsSsy_zhfJAvm4Hq8bdgtjixk7V5c_DOrKvDnqoJDc7ob7g&usqp=CAU" 
+            },
+
+            {
+                "sku":3,
+                "tipoProducto": "consola",
+                "modelo":"cfi-11015b", 
+                "nombreProducto": "PS5", 
+                "color":"blanco",
+                "precio":300000,
+                "imagen": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21" 
+            },
+
+            {
+                "sku":4,
+                "tipoProducto": "consola",
+                "modelo":"cfi-11015b", 
+                "nombreProducto": "PS5", 
+                "color":"negro",
+                "precio":300000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJ8efRbsygB31fjs-oMq0GsSsy_zhfJAvm4Hq8bdgtjixk7V5c_DOrKvDnqoJDc7ob7g&usqp=CAU" 
+            },
+
+            {
+                "sku":5,
+                "tipoProducto": "consola",
+                "modelo":"slim", 
+                "nombreProducto": "PS4", 
+                "color":"negro",
+                "precio":200000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuWeD0Ndczg_NYzWOc0toQ2h7BqU-hW3DLog&usqp=CAU" 
+
+            },
+
+            {
+                "sku":6,
+                "tipoProducto": "consola",
+                "modelo":"pro", 
+                "nombreProducto": "PS4", 
+                "color":"blanco",
+                "precio":200000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgy2IQq2i04ITFj-xWmnEpDONFmV2vFisDAw&usqp=CAU" 
+
+            }
+
+        ]
+
+    },
+
+    {"id": 2 ,"nombre": "microsoft", "marca": "xbox", 
+        "producto":[
+            
+            {
+                "sku":7,
+                "tipoProducto": "consola",
+                "modelo":"s", 
+                "nombreProducto": "xbox series", 
+                "color":"blanco",
+                "precio": 350000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoA_0pSy_9OzmcLUilPtyfJw_eWMDnmsbipw&usqp=CAU" 
+            },
+
+            {
+                "sku":8,
+                "tipoProducto": "consola",
+                "modelo":"x", 
+                "nombreProducto": "xbox series", 
+                "color":"negro",
+                "precio": 350000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMUpsLeAfrouzrbA-ecfPGSzdsQhLIU2CE-g&usqp=CAU" 
+            },
+
+            {
+                "sku":9,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "xbox one", 
+                "color":"verde",
+                "precio": 280000,
+                "imagen": "https://m.media-amazon.com/images/I/51I9bYDTbXL._AC_SX522_.jpg" 
+            },
+
+            {
+                "sku":10,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "xbox one", 
+                "color":"rojo",
+                "precio": 280000,
+                "imagen": "https://m.media-amazon.com/images/I/51ImoaJ0PrL._AC_SX355_.jpg" 
+            }
+
+        ]
+
+    },
+
+    {"id": 3 ,"nombre": "Nintendo", "marca": "nintendo", 
+        "producto": [
+            {
+                "sku":11,
+                "tipoProducto": "consola",
+                "modelo":"oled", 
+                "nombreProducto": "nintendo switch", 
+                "color":"tradicional",
+                "precio": 410000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjrg1dWL-RsedTIgyacO3wRluFRfidJGMG1-wVe-4OqnUK4GU9v9GdfxFiuAaHt7z8Xms&usqp=CAU" 
+            },
+
+            {
+                "sku":12,
+                "tipoProducto": "consola",
+                "modelo":"oled", 
+                "nombreProducto": "nintendo switch", 
+                "color":"blanco",
+                "precio": 410000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4gpFmb6Np3yWFbsqf6ZNuvvl-eRJMzXjanw&usqp=CAU" 
+            },
+
+            {
+                "sku":13,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "nintendo switch", 
+                "color":"gris",
+                "precio": 350000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMk79itWp_PlVZts_WxX-kcwEP20vx7GK8zxf8Lnc4ygbUlK5TR5SAev6afImdzQPHhNQ&usqp=CAU" 
+            },
+
+            {
+                "sku":14,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "nintendo switch", 
+                "color":"gold",
+                "precio": 380000,
+                "imagen": "https://m.media-amazon.com/images/I/71dRZaxtVzL._SX425_.jpg" 
+            },
+
+            {
+                "sku":15,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds", 
+                "color":"negra",
+                "precio": 200000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsV5KyVt3KSsr3q_mYdN1cO-hFH2Bl8qNz3Q&usqp=CAU" 
+            },
+
+            {
+                "sku":16,
+                "tipoProducto": "consola",
+                "modelo":"ds", 
+                "nombreProducto": "nintendo ds", 
+                "color":"rosa",
+                "precio": 200000,
+                "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFKKL1hRGSKuQRylJknm_Wu92hGRJw7rfl5Q&usqp=CAU" 
+            } 
+            
+        ]
+    
+    }
+  
+]
