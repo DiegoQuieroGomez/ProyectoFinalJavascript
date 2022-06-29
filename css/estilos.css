@@ -23,7 +23,7 @@ body{
 
 .list{
     width: 80%;
-    height: 35vh;
+    height: 60vh;
     display: flex;
     justify-content:start;
     flex-direction: column;
@@ -68,7 +68,7 @@ body{
 }
 
 /*Consolas*/
-.listaConsola{
+.consola{
     width: 80px;
     height: 20px;
     border-radius: 3px;
@@ -81,13 +81,13 @@ body{
     
 }
 
-.listaConsola:hover{
+.consola:hover{
     background-color: #2b50bd;
 }
 
 
 /*Juegos*/
-.listaJuego{
+.juego{
     width: 80px;
     height: 20px;
     border-radius: 3px;
@@ -100,12 +100,12 @@ body{
     
 }
 
-.listaJuego:hover{
+.juego:hover{
     background-color: #2b50bd;
 }
 
 /*Accesorios*/
-.listaAccesorio{
+.accesorio{
     width: 80px;
     height: 20px;
     border-radius: 3px;
@@ -118,13 +118,13 @@ body{
     
 }
 
-.listaAccesorio:hover{
+.accesorio:hover{
     background-color: #2b50bd;
 }
 
 /*Otros*/
 
-.listaOtro{
+.otro{
     width: 80px;
     height: 20px;
     border-radius: 3px;
@@ -137,7 +137,7 @@ body{
     
 }
 
-.listaOtro:hover{
+.otro:hover{
     background-color: #2b50bd;
 }
 

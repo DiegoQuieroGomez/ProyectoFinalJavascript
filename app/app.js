@@ -4,6 +4,7 @@
 
 let carro = []
 
+let todosMisProductos = []
 let mix = []
 
 //Array Ultima Compra en Local Storage
@@ -34,10 +35,11 @@ const mostrarNombre = () =>{
 
 //Aplicacion Fetch
 
-const productosApi = async (e) => {
+const productosApi = async () => {
     const response = await fetch ("data/productos.json")
     const data = await response.json()
     mix = data
+    todosMisProductos = [...data.data[0].producto,...data.data[1].producto,...data.data[2].producto]
     
 }
 
@@ -45,12 +47,11 @@ productosApi()
 
 
 const renderizarProductos = (e) => {
-    const fabricanteElegido = e.target.getAttribute("id")
-    const productosElegidos = e.target.getAttribute("data-id")
-    const productos = mix[fabricanteElegido].producto.filter((productos) => productos.tipoProducto == productosElegidos)
+    const fabricanteElegido = e.target.getAttribute("data-id")
+    const productosElegidos = e.target.getAttribute("class")
+    const productos = mix.data[fabricanteElegido].producto.filter((productos) => productos.tipoProducto == productosElegidos)
     listarProductosPorTipo(productos)
 }
-
 
 //Listeners al Menú
 function listenerMenu(clase,funcion){
@@ -61,7 +62,10 @@ function listenerMenu(clase,funcion){
     
 }
 //Ejecución Menú
-listenerMenu(".listaConsola",renderizarProductos)
+listenerMenu(".consola",renderizarProductos)
+listenerMenu(".juego",renderizarProductos)
+listenerMenu(".accesorio",renderizarProductos)
+listenerMenu(".otro",renderizarProductos)
 
 
 //-----------------Lista productos dependiendo de la marca------------------------------------  ARREGLAR
@@ -83,8 +87,10 @@ function listarProductosPorTipo(array){
         listenersContenidoGenerado(".buttonCTA", agregarProducto)
 
     })
+
     
 }
+
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -92,21 +98,8 @@ function listarProductosPorTipo(array){
 const agregarProducto = (e) =>{
    
     const productoElegido = e.target.getAttribute("id")
-    mix[0].producto.find((producto) => producto.sku == productoElegido)
-    
-    
-
-    
-     
-    console.log(producto)
-    console.log(fabricante)
- 
-    
-   
-   
-    //const producto = mix.find((producto) => producto.sku == productoElegido)
-    //carro.push(producto)
-
+    const producto = todosMisProductos.find((producto) => producto.sku == productoElegido)
+    carro.push(producto)
     guardarCompra = JSON.stringify(carro)
     localStorage.setItem("guardarCompra", guardarCompra)
    
@@ -172,7 +165,7 @@ function listarCarro(){
             <img src="${producto.imagen}" class="productImg2">
             <h1 class="producto"> ${producto.tipoProducto} ${producto.nombre} - SKU: ${producto.id}</h1>
             <span class="productPrice2"> $${producto.precio}</span>
-            <input type="image" src="sources/trash.svg" data-id="${producto.id}" class="buttonEliminar">
+            <input type="image" src="sources/trash.svg" data-id="${producto.sku}" class="buttonEliminar">
          `
         productContainer.append(item)
         //Añade listeners al contenido generado dinámicamente
@@ -192,7 +185,7 @@ function listarCarro(){
 
 const eliminarDelCarro = (e) => {
 const producto = e.target.getAttribute("data-id")
-carro = carro.filter((product) => product.id != producto)
+carro = carro.filter((product) => product.sku != producto)
 console.log(carro)
 listarCarro()
 
