@@ -201,6 +201,10 @@ body{
     border: static 3px grey;
 }
 
+.buttonCTA:hover{
+    background-color: #2b50bd;
+}
+
 /*<----------------------------------------Contenedor carro---------------------------------->*/
 
 .productsCarrito{
@@ -305,5 +309,17 @@ body{
 
 .opcionSuperior{
     width: 30px;
+
+}
+
+.buttonLocal{
+    width: 140px;
+    height: 80px;
+    margin-top: 10px;
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    color: darkorange;
+    border: solid 3px rgb(187, 12, 12);
+
 
 }

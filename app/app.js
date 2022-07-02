@@ -4,15 +4,21 @@
 
 let carro = []
 
+//Spread de data.producto de API en array local
 let todosMisProductos = []
+
+//Contienen data total
 let mix = []
 
-//Array Ultima Compra en Local Storage
+//Contiene Ultima Compra Finalizada LocalStorage
 let compraPrevia = []
 compraPrevia = JSON.parse(localStorage.getItem('historialDeCompra'))
 
+//Contiene ultimo carro guardado Local Storage
 let guardarCompra = []
+guardarCompra = JSON.parse(localStorage.getItem('guardarCompra'))
 
+//sin funcionamiento de momento
 const historialDeBusqueda = []
 
 
@@ -26,7 +32,11 @@ const productContainer = document.querySelector("#contentContainer")
 const historialDeCompra = document.getElementById("historial")
 const botCarro = document.getElementById("carro")
 
-//<------------------------Funciones------------------------------------->
+//<-----------------------------------------------------------------Funciones------------------------------------------------------------->
+
+
+
+
 
 //Confirma evento escuchado
 const mostrarNombre = () =>{
@@ -34,7 +44,6 @@ const mostrarNombre = () =>{
 }
 
 //Aplicacion Fetch
-
 const productosApi = async () => {
     const response = await fetch ("data/productos.json")
     const data = await response.json()
@@ -42,9 +51,10 @@ const productosApi = async () => {
     todosMisProductos = [...data.data[0].producto,...data.data[1].producto,...data.data[2].producto]
     
 }
-
+//------------------------------------------Ejecucion ----------------------------------------------------
 productosApi()  
 
+//Ejecución Menú
 
 const renderizarProductos = (e) => {
     const fabricanteElegido = e.target.getAttribute("data-id")
@@ -53,23 +63,23 @@ const renderizarProductos = (e) => {
     listarProductosPorTipo(productos)
 }
 
-//Listeners al Menú
-function listenerMenu(clase,funcion){
-    const botonesMenu = document.querySelectorAll(clase)
-    botonesMenu.forEach((botonesMenu) => {
-        botonesMenu.addEventListener("click", funcion)
+//Funcionalidad menu
+listenersContenido(".consola",renderizarProductos)
+listenersContenido(".juego",renderizarProductos)
+listenersContenido(".accesorio",renderizarProductos)
+listenersContenido(".otro",renderizarProductos)
+historialDeCompra.addEventListener("click",ultimaCompra)
+botCarro.addEventListener("click", confirmarCarro)
+
+//Listeners selectarAll
+function listenersContenido(clase,funcion){
+    const botones = document.querySelectorAll(clase)
+    botones.forEach((botones) => {
+        botones.addEventListener("click", funcion)
     })
-    
 }
-//Ejecución Menú
-listenerMenu(".consola",renderizarProductos)
-listenerMenu(".juego",renderizarProductos)
-listenerMenu(".accesorio",renderizarProductos)
-listenerMenu(".otro",renderizarProductos)
 
-
-//-----------------Lista productos dependiendo de la marca------------------------------------  ARREGLAR
-
+//lista productos por tipo (CONSOLA/JUEGO/ACCESORIO/OTRO) -ARREGLAR DATOS SOLICITADOS-
 function listarProductosPorTipo(array){
     productContainer.innerHTML =""
     array.forEach((producto) => {
@@ -83,12 +93,11 @@ function listarProductosPorTipo(array){
             <button id= "${producto.sku}" class="buttonCTA"> Agregar al carro </button>
          `
         productContainer.append(item)
+
         //Añade listeners al contenido generado dinámicamente
-        listenersContenidoGenerado(".buttonCTA", agregarProducto)
+        listenersContenido(".buttonCTA", agregarProducto)
 
     })
-
-    
 }
 
 
@@ -96,38 +105,17 @@ function listarProductosPorTipo(array){
 
 //Añadir al Carro
 const agregarProducto = (e) =>{
-   
     const productoElegido = e.target.getAttribute("id")
     const producto = todosMisProductos.find((producto) => producto.sku == productoElegido)
     carro.push(producto)
     guardarCompra = JSON.stringify(carro)
     localStorage.setItem("guardarCompra", guardarCompra)
-   
 }
 
 
-//<--------------------------------Listeners----------------------------------------->
-
-historialDeCompra.addEventListener("click",ultimaCompra)
-botCarro.addEventListener("click", listarCarro)
-
-
-//Añade Listeners al contenido generado dinámicamente
-function listenersContenidoGenerado(clase, funcion){
-    const botonesCompra = document.querySelectorAll(clase)
-    botonesCompra.forEach((botonCompra) => {
-        botonCompra.addEventListener("click", funcion)
-    })
-
-}
-
-
-//Verificar Ultima Compra
-
+//Trae ultima compra
 function ultimaCompra(){
-
-    if (localStorage.getItem('historialDeCompra')){
-       productContainer.innerHTML = ""
+    productContainer.innerHTML = ""
         compraPrevia = JSON.parse(localStorage.getItem('historialDeCompra'))
         compraPrevia.forEach((producto) =>{
             
@@ -136,25 +124,38 @@ function ultimaCompra(){
             ultima.innerHTML = `
                 <img src="${producto.imagen}" class="productImg2">
                 <h1 class="producto"> ${producto.tipoProducto} ${producto.nombre} - SKU: ${producto.id}</h1>
-                
             `
             productContainer.append(ultima)
 
         })
+}
 
-    }else{
-        const ultima1 = document.createElement("div")
-        ultima1.className = " productHistorial"
-        ultima1.innerHTML = `
-            <h1> No tenemos registros de compras previas. Bienvenido!! </h1>
+//Localstorage y carro vacio
+function confirmarCarro(){
+    if (carro.length ===0 ){
+        productContainer.innerHTML =`
+            <h1> carro vacio</h1>
+            <button id= "buttonLocal" class="buttonLocal">cargar local storage puto?</button>
         `
-        productContainer.append(ultima1)
+
+        listenersContenido(".buttonLocal", reemplazarCarroVacio)
+        /*
+        () => {carro =guardarCompra
+        listarCarro(carro)})
+        */
+    }else{
+        listarCarro(carro)
     }
 
 }
+function reemplazarCarroVacio(){
+        carro = guardarCompra
+        listarCarro(carro)
+
+}
+
 
 //listar Carro
-
 function listarCarro(){
     productContainer.innerHTML =""
     carro.forEach((producto) => {
@@ -168,28 +169,32 @@ function listarCarro(){
             <input type="image" src="sources/trash.svg" data-id="${producto.sku}" class="buttonEliminar">
          `
         productContainer.append(item)
+
         //Añade listeners al contenido generado dinámicamente
-        listenersContenidoGenerado(".buttonEliminar", eliminarDelCarro)
+        listenersContenido(".buttonEliminar", eliminarDelCarro)
     })
+
     //Boton finaliza compra al final del Carro
-    
     const finalizarCompra = document.createElement("div")
     finalizarCompra.className = "finalizarCompra"
     finalizarCompra.innerHTML = `
         <button class= "pagar" data-id="pagar">Pagar</button>
     `
     productContainer.append(finalizarCompra)
-    listenersContenidoGenerado(".pagar",pagar)
+    listenersContenido(".pagar",pagar)
 
 }
 
+//Elimina producto del carro y LocalStorage
 const eliminarDelCarro = (e) => {
 const producto = e.target.getAttribute("data-id")
 carro = carro.filter((product) => product.sku != producto)
-console.log(carro)
-listarCarro()
-
+guardarCompra = JSON.stringify(carro)
+localStorage.setItem("guardarCompra", guardarCompra)
+confirmarCarro(carro)
 }
+
+
 //Confirmación de pago con SweetAlert
 const pagar = () =>{
 
@@ -200,7 +205,7 @@ const pagar = () =>{
 
     Swal.fire({
         title: '¿Deseas ir a la página del banco?',
-        text: "Dejaremos tu carrito intacto si quieres ir mas tarde",
+        text: "El total es de $" + total +" Pesos",
         icon: 'question',
         iconColor:"yellow",
         width:"20%",
