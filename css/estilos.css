@@ -284,7 +284,7 @@ body{
 .historialDeCompra{
     background-color: rgb(129, 59, 71);
     margin: 3px;
-    width: 50%;
+    width: 25%;
     height: 90px;
     border-radius: 30px;
     padding: 20px 10px;
@@ -299,7 +299,6 @@ body{
     height: 30%;
     margin-left: 2px;
     
-
 }
 
 .contenedorOpcionesSuperiores{
@@ -323,3 +322,4 @@ body{
 
 
 }
+

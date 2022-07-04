@@ -21,8 +21,6 @@ guardarCompra = JSON.parse(localStorage.getItem('guardarCompra'))
 //sin funcionamiento de momento
 const historialDeBusqueda = []
 
-
-
 //<--------------------------------------------------------------------------------------------------------->
 
 //Query de elementos
@@ -88,7 +86,7 @@ function listarProductosPorTipo(array){
         item.className = "product"
         item.innerHTML =`         
             <img src="${producto.imagen}" class="productImg">
-            <h2 class="productName"> ${producto.tipoProducto} ${producto.nombre} </h2>
+            <h2 class="productName"> ${producto.nombreProducto} </h2>
             <span class="productPrice"> $ ${producto.precio} </span>
             <button id= "${producto.sku}" class="buttonCTA"> Agregar al carro </button>
          `
@@ -149,7 +147,7 @@ function confirmarCarro(){
 
 }
 function reemplazarCarroVacio(){
-        carro = guardarCompra
+        carro = JSON.parse(localStorage.getItem("guardarCompra"))
         listarCarro(carro)
 
 }
@@ -157,6 +155,7 @@ function reemplazarCarroVacio(){
 
 //listar Carro
 function listarCarro(){
+    console.log(carro)
     productContainer.innerHTML =""
     carro.forEach((producto) => {
         

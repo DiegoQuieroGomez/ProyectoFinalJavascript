@@ -9,7 +9,7 @@
                 "sku":1,
                 "tipoProducto": "consola",
                 "modelo":"cfi-1100b", 
-                "nombreProducto": "PS5", 
+                "nombreProducto": "PS5 Blanca", 
                 "color":"blanco",
                 "precio": 300000,
                 "imagen": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21" 
@@ -19,7 +19,7 @@
                 "sku":2,
                 "tipoProducto": "consola",
                 "modelo":"cfi-1100b", 
-                "nombreProducto": "PS5", 
+                "nombreProducto": "PS5 Negra", 
                 "color":"negro",
                 "precio":300000,
                 "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJ8efRbsygB31fjs-oMq0GsSsy_zhfJAvm4Hq8bdgtjixk7V5c_DOrKvDnqoJDc7ob7g&usqp=CAU" 
@@ -29,7 +29,7 @@
                 "sku":3,
                 "tipoProducto": "consola",
                 "modelo":"cfi-11015b", 
-                "nombreProducto": "PS5", 
+                "nombreProducto": "PS5 Blanca cfi-11015b", 
                 "color":"blanco",
                 "precio":300000,
                 "imagen": "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21" 
@@ -164,9 +164,139 @@
                 "precio": 20000,
                 "imagen": "https://m.media-amazon.com/images/I/81DtZ9i8abL._SL1500_.jpg" 
 
+            },
+
+            {
+                "sku":1550,
+                "tipoProducto": "accesorio",
+                "categoria":"Camara", 
+                "nombreProducto": "PS5 HD", 
+                "plataforma":"PS5",
+                "precio": 200000,
+                "imagen": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-cencosud-master-catalog/default/dw33dc4001/images/imagenes-productos/743/440445-0000-001.jpg?sw=513&sh=654&sm=fit" 
+
+            },
+
+            {
+                "sku":1551,
+                "tipoProducto": "accesorio",
+                "categoria":"Control", 
+                "nombreProducto": "Control Multimedia PS5", 
+                "plataforma":"PS5",
+                "precio": 24990,
+                "imagen": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-cencosud-master-catalog/default/dw4cb72168/images/imagenes-productos/743/440446-0000-001.jpg?sw=513&sh=654&sm=fit" 
+
+            },
+
+            {
+                "sku":1552,
+                "tipoProducto": "accesorio",
+                "categoria":"Auriculares", 
+                "nombreProducto": "Auriculares Inalambricos Pulse 3D", 
+                "plataforma":"PS5",
+                "precio": 24990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/14557295_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+
+            {
+                "sku":1553,
+                "tipoProducto": "accesorio",
+                "categoria":"Control", 
+                "nombreProducto": "Control PS5 Dualsense Cosmic Red", 
+                "plataforma":"PS5",
+                "precio": 59990,
+                "imagen": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-cencosud-master-catalog/default/dwd8406a3b/images/imagenes-productos/743/195533-0000-001.jpg?sw=513&sh=654&sm=fit" 
+
+            },
+
+            {
+                "sku":1554,
+                "tipoProducto": "accesorio",
+                "categoria":"Control", 
+                "nombreProducto": "Control PlayStation Wireless DualSense PS5", 
+                "plataforma":"PS5",
+                "precio": 54990,
+                "imagen": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-cencosud-master-catalog/default/dwe94c8b7e/images/imagenes-productos/743/440442-0000-001.jpg?sw=513&sh=654&sm=fit" 
+
+            },
+
+            {
+                "sku":1555,
+                "tipoProducto": "accesorio",
+                "categoria":"Cargador", 
+                "nombreProducto": "Cargador para Controles Ps5 Dualsense", 
+                "plataforma":"PS5",
+                "precio": 10990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/15980370_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+
+            {
+                "sku":1556,
+                "tipoProducto": "accesorio",
+                "categoria":"Cargador", 
+                "nombreProducto": "Cargador para Controles Ps5 Dualsense", 
+                "plataforma":"PS5",
+                "precio": 10990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/15980370_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+
+            {
+                "sku":1657,
+                "tipoProducto": "accesorio",
+                "categoria":"Cargador", 
+                "nombreProducto": "Cargador Ps4 Doble Base Control Ps4 Dualshock", 
+                "plataforma":"PS4",
+                "precio": 10990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/gsc_112539551_337613_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+
+            {
+                "sku":1658,
+                "tipoProducto": "accesorio",
+                "categoria":"Control", 
+                "nombreProducto": "Joystick Dual Shock Inalámbrico Ps4 Monster", 
+                "plataforma":"PS4",
+                "precio": 10990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/15433833_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+
+            {
+                "sku":1659,
+                "tipoProducto": "accesorio",
+                "categoria":"Control", 
+                "nombreProducto": "Volante con Pedales Gamer Ps4", 
+                "plataforma":"PS4",
+                "precio": 10990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/16139654_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+
+            {
+                "sku":1660,
+                "tipoProducto": "accesorio",
+                "categoria":"Cargador", 
+                "nombreProducto": "Estación de Carga Oivo para Controles de Ps4", 
+                "plataforma":"PS4",
+                "precio": 10990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/15997246_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+
+            {
+                "sku":1561,
+                "tipoProducto": "accesorio",
+                "categoria":"Auriculares", 
+                "nombreProducto": "Audífonos Gamer Para Ps4 Con Micrófono", 
+                "plataforma":"PS4",
+                "precio": 5990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/gsc_110770368_279776_1?wid=1500&hei=1500&qlt=70" 
+
             }
-
-
 
         ]
 
