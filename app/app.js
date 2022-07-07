@@ -3,7 +3,8 @@
 //Declaraciones
 
 let carro = []
-
+let ofertas = []
+let descuento
 //Spread de data.producto de API en array local
 let todosMisProductos = []
 
@@ -29,6 +30,8 @@ const cardContainer = document.querySelector("#cardContainer")
 const productContainer = document.querySelector("#contentContainer")
 const historialDeCompra = document.getElementById("historial")
 const botCarro = document.getElementById("carro")
+const oferContainer = document.querySelector("#ofertas")
+const buscador = documento.querySelector("#buscador")
 
 //<-----------------------------------------------------------------Funciones------------------------------------------------------------->
 
@@ -68,6 +71,7 @@ listenersContenido(".accesorio",renderizarProductos)
 listenersContenido(".otro",renderizarProductos)
 historialDeCompra.addEventListener("click",ultimaCompra)
 botCarro.addEventListener("click", confirmarCarro)
+buscador.addEventListener("onchange",)
 
 //Listeners selectarAll
 function listenersContenido(clase,funcion){
@@ -96,18 +100,76 @@ function listarProductosPorTipo(array){
         listenersContenido(".buttonCTA", agregarProducto)
 
     })
+        mostrarOfertas(array)
+    
+    
 }
 
 
+//Devuelve 3 objetos random del un array
+function mostrarOfertas(array){
+    const oferta =  [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,3)
+    oferContainer.innerHTML=""
+    oferta.forEach((producto)=> {
+        
+        if(producto.tipoProducto == "consola") {
+            descuento = 0.93
+        }if (producto.tipoProducto == "juego"){
+            descuento = 0.91
+        }if(producto.tipoProducto == "accesorio"){
+            descuento = 0.95
+        }if(producto.tipoProducto == "otro"){
+            descuento = 0.05  
+        }
+
+        const ofer = document.createElement("div")
+        ofer.className = "oferta"
+        ofer.innerHTML =`         
+        <img src="${producto.imagen}" class="productImg">
+        <h2 class="productName"> ${producto.nombreProducto} </h2>
+        <span class="productPrice"> $ ${Math.round(producto.precio * descuento)} </span>
+        <button id= "${producto.sku}" class="buttonCTA"> Agregar al carro </button>
+     `  
+        oferContainer.append(ofer)
+
+        
+        listenersContenido("buttonCTA", agregarProducto)
+    });
+
+    
+}
+
+//Buscador
+
+/*
+function buscar(){
+    if(array)
+}
+*/
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Añadir al Carro
 const agregarProducto = (e) =>{
+    
     const productoElegido = e.target.getAttribute("id")
     const producto = todosMisProductos.find((producto) => producto.sku == productoElegido)
     carro.push(producto)
     guardarCompra = JSON.stringify(carro)
     localStorage.setItem("guardarCompra", guardarCompra)
+    Toastify({
+        text: "Producto añadido",
+        duration: 3000,
+        destination:"",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
 }
 
 
@@ -136,19 +198,11 @@ function confirmarCarro(){
             <button id= "buttonLocal" class="buttonLocal">cargar local storage puto?</button>
         `
 
-        listenersContenido(".buttonLocal", reemplazarCarroVacio)
-        /*
-        () => {carro =guardarCompra
-        listarCarro(carro)})
-        */
+        listenersContenido(".buttonLocal",  () => {carro =guardarCompra
+            listarCarro(carro)})
     }else{
-        listarCarro(carro)
+            listarCarro(carro)
     }
-
-}
-function reemplazarCarroVacio(){
-        carro = JSON.parse(localStorage.getItem("guardarCompra"))
-        listarCarro(carro)
 
 }
 
@@ -229,6 +283,9 @@ const pagar = () =>{
         }
       })
 
-
 }
 
+
+
+
+  
