@@ -48,6 +48,50 @@
             {
                 "sku":5,
                 "tipoProducto": "consola",
+                "modelo":"cfi-11015b", 
+                "nombreProducto": "PS5 Forbidden West Collector Edition", 
+                "color":"Especial Edition",
+                "precio":422990,
+                "imagen": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-paris-marketplace/default/dwfb6e259f/images/imagenes-productos/800/MK8D/MK8D606TY2-001.png?sw=513&sh=654&sm=fit" 
+
+            },
+
+            {
+                "sku":6,
+                "tipoProducto": "consola",
+                "modelo":"cfi-11015b", 
+                "nombreProducto": "PS5 Horizon Forbidden West", 
+                "color":"Especial Edition",
+                "precio":422990,
+                "imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/06/horizon-ii-forbidden-west-ps5-fan-1978810.jpeg?itok=40y4w38l" 
+
+            },
+
+            {
+                "sku":7,
+                "tipoProducto": "consola",
+                "modelo":"cfi-1100b", 
+                "nombreProducto": "PS5 God of War Ragnarok", 
+                "color":"Especial Edition",
+                "precio":422990,
+                "imagen": "https://i1.wp.com/www.senpai.com.mx/wp-content/uploads/2021/09/PS5-GoW-Ragnarok-scaled.jpeg?resize=2560%2C2560&ssl=1" 
+
+            },
+
+            {
+                "sku":8,
+                "tipoProducto": "consola",
+                "modelo":"cfi-1100b", 
+                "nombreProducto": "PS5 Spiderman", 
+                "color":"Especial Edition",
+                "precio":422990,
+                "imagen": "https://i.3djuegos.com/juegos/17362/marvel__039_s_spiderman_2/fotos/maestras/marvel__039_s_spiderman_2-5272180.jpg" 
+
+            },
+
+            {
+                "sku":9,
+                "tipoProducto": "consola",
                 "modelo":"slim", 
                 "nombreProducto": "PS4", 
                 "color":"negro",
@@ -57,13 +101,68 @@
             },
 
             {
-                "sku":6,
+                "sku":10,
                 "tipoProducto": "consola",
                 "modelo":"pro", 
                 "nombreProducto": "PS4", 
                 "color":"blanco",
                 "precio":200000,
                 "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgy2IQq2i04ITFj-xWmnEpDONFmV2vFisDAw&usqp=CAU" 
+
+            },
+
+            {
+                "sku":11,
+                "tipoProducto": "consola",
+                "modelo":"pro ", 
+                "nombreProducto": "PS4 Spiderman", 
+                "color":"Special Edition",
+                "precio":459990,
+                "imagen": "https://i.linio.com/p/e62f59ed81e050524639bd1387af0719-product.webp" 
+
+            },
+
+            {
+                "sku":12,
+                "tipoProducto": "consola",
+                "modelo":"pro ", 
+                "nombreProducto": "PS4 Taken The King Destiny", 
+                "color":"Special Edition",
+                "precio":299990,
+                "imagen": "https://home.ripley.cl/store/Attachment/WOP/D172/2000354936206/2000354936206_2.jpg" 
+
+            },
+
+            {
+                "sku":13,
+                "tipoProducto": "consola",
+                "modelo":"pro ", 
+                "nombreProducto": "PS4 God of War", 
+                "color":"Special Edition",
+                "precio":399990,
+                "imagen": "https://m.media-amazon.com/images/I/817Qt5J1YcL._SL1500_.jpg" 
+
+            },
+
+            {
+                "sku":14,
+                "tipoProducto": "consola",
+                "modelo":"pro ", 
+                "nombreProducto": "PS4 Solid Five", 
+                "color":"Special Edition",
+                "precio":399990,
+                "imagen": "https://juegoscompetitivos.com/wp-content/uploads/2022/04/Metal-Gear-Solid-5-Limited-Edition-PS4-ahora-disponible-para.jpg.webp?ezimgfmt=ng:webp/ngcb1" 
+
+            },
+
+            {
+                "sku":14,
+                "tipoProducto": "consola",
+                "modelo":"pro ", 
+                "nombreProducto": "PS4 Persona 5", 
+                "color":"Special Edition",
+                "precio":399990,
+                "imagen": "https://cl.buscafs.com/www.levelup.com/public/uploads/images/617390_1019x670.jpg" 
 
             },
 
@@ -163,6 +262,126 @@
                 "plataforma":"PS4",
                 "precio": 20000,
                 "imagen": "https://m.media-amazon.com/images/I/81DtZ9i8abL._SL1500_.jpg" 
+
+            },
+            
+            {
+                "sku":551,
+                "tipoProducto": "juego",
+                "categoria":"Pelea", 
+                "nombreProducto": "Demon Slayer", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-paris-marketplace/default/dwa385adf5/images/imagenes-productos/800/MK6P/MK6P5UPTTR-001.jpg?sw=320&sh=409&sm=fit" 
+
+            },
+            
+            {
+                "sku":552,
+                "tipoProducto": "juego",
+                "categoria":"RPG", 
+                "nombreProducto": "Cristale", 
+                "plataforma":"PS5",
+                "precio": 32000,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/16207904_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+            
+            {
+                "sku":553,
+                "tipoProducto": "juego",
+                "categoria":"RPG", 
+                "nombreProducto": "Elden Ring", 
+                "plataforma":"PS5",
+                "precio": 450000,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/16161772_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+            
+            {
+                "sku":554,
+                "tipoProducto": "juego",
+                "categoria":"RPG", 
+                "nombreProducto": "Horizon Forbidden West", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/15927443_1?wid=1500&hei=1500&qlt=70" 
+
+            },
+            
+            {
+                "sku":555,
+                "tipoProducto": "juego",
+                "categoria":"RPG", 
+                "nombreProducto": "GODFALL", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://andigraf.cl/2997-large_default/juego-ps5-godfall.jpg" 
+
+            },
+            
+            {
+                "sku":556,
+                "tipoProducto": "juego",
+                "categoria":"Accion", 
+                "nombreProducto": "AVENGERS", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-paris-marketplace/default/dw522bf9bb/images/imagenes-productos/800/MKRP/MKRPJ2KETJ-001.jpg?sw=513&sh=654&sm=fit" 
+
+            },
+            
+            {
+                "sku":557,
+                "tipoProducto": "juego",
+                "categoria":"Accion", 
+                "nombreProducto": "Inmortal Rising", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/2358702-1000-1000/image-efbf429041a04defbfcdbec12cb2057f.jpg?v=637666457987830000" 
+
+            },
+            
+            {
+                "sku":558,
+                "tipoProducto": "juego",
+                "categoria":"Accion", 
+                "nombreProducto": "Uncharted Collection", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-cencosud-master-catalog/default/dw462f2881/images/imagenes-productos/743/428705-0000-001.jpg?sw=513&sh=654&sm=fit" 
+
+            },
+            
+            {
+                "sku":559,
+                "tipoProducto": "juego",
+                "categoria":"Accion", 
+                "nombreProducto": "Resident Evil Village", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/15218130_1?wid=1500&hei=1500&qlt=70"
+            },
+
+            {
+                "sku":560,
+                "tipoProducto": "juego",
+                "categoria":"Aventura", 
+                "nombreProducto": "SackBoy", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/149/14962/14962273.jpg" 
+
+            },
+
+            {
+                "sku":561,
+                "tipoProducto": "juego",
+                "categoria":"Accion", 
+                "nombreProducto": "WonderLands", 
+                "plataforma":"PS5",
+                "precio": 20000,
+                "imagen": "https://www.todojuegos.cl/Productos/_mediaProd/28976/tinytinasps5.jpg" 
 
             },
 
@@ -309,7 +528,7 @@
                 "sku":37,
                 "tipoProducto": "consola",
                 "modelo":"s", 
-                "nombreProducto": "xbox series", 
+                "nombreProducto": "Xbox Series", 
                 "color":"blanco",
                 "precio": 350000,
                 "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoA_0pSy_9OzmcLUilPtyfJw_eWMDnmsbipw&usqp=CAU" 
@@ -319,14 +538,54 @@
                 "sku":38,
                 "tipoProducto": "consola",
                 "modelo":"x", 
-                "nombreProducto": "xbox series", 
+                "nombreProducto": "Xbox Series", 
                 "color":"negro",
                 "precio": 350000,
                 "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMUpsLeAfrouzrbA-ecfPGSzdsQhLIU2CE-g&usqp=CAU" 
             },
-
+            
             {
                 "sku":39,
+                "tipoProducto": "consola",
+                "modelo":"x", 
+                "nombreProducto": "Xbox Series Border 3", 
+                "color":"Especial Edition",
+                "precio": 350000,
+                "imagen": "https://cl.buscafs.com/www.levelup.com/public/uploads/images/668753/668753.jpg" 
+            },
+
+            {
+                "sku":40,
+                "tipoProducto": "consola",
+                "modelo":"x", 
+                "nombreProducto": "Xbox Series Apex S", 
+                "color":"Especial Edition",
+                "precio": 350000,
+                "imagen": "https://i.blogs.es/bd06bf/xbox-series-s-03/1366_2000.jpeg" 
+            },
+            
+            {
+                "sku":41,
+                "tipoProducto": "consola",
+                "modelo":"x", 
+                "nombreProducto": "Xbox Series FAR CRY", 
+                "color":"Especial Edition",
+                "precio": 350000,
+                "imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2021/09/far-cry-6-2458705.jpg?itok=mllYGzZZ" 
+            },
+
+            {
+                "sku":42,
+                "tipoProducto": "consola",
+                "modelo":"x", 
+                "nombreProducto": "Xbox Series Diablo Resurrected 2", 
+                "color":"Especial Edition",
+                "precio": 350000,
+                "imagen": "https://www.gamespot.com/a/uploads/screen_medium/1179/11799911/3882649-screenshot2021-09-22at2.15.03pm.png" 
+            },
+
+            {
+                "sku":43,
                 "tipoProducto": "consola",
                 "modelo":"classic", 
                 "nombreProducto": "xbox one", 
@@ -334,12 +593,83 @@
                 "precio": 280000,
                 "imagen": "https://m.media-amazon.com/images/I/51I9bYDTbXL._AC_SX522_.jpg" 
             },
-
+            
             {
-                "sku":40,
+                "sku":44,
                 "tipoProducto": "consola",
                 "modelo":"classic", 
-                "nombreProducto": "xbox one", 
+                "nombreProducto": "xbox One Halo", 
+                "color":"Especial Edition",
+                "precio": 380000,
+                "imagen": "https://assets.xboxservices.com/assets/56/a7/56a799fc-acc0-4bdd-a513-c7a0df4ebe49.jpg?n=17171717_Content-Placement-0_788x444.jpg" 
+            },
+            
+            {
+                "sku":45,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "xbox One Sunset Edition", 
+                "color":"Especial Editon",
+                "precio": 380000,
+                "imagen": "https://m.media-amazon.com/images/I/91G6l77sokL._SL1500_.jpg" 
+            },
+            
+            {
+                "sku":46,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "Xbox One Rata Craft ", 
+                "color":"Especial Editon",
+                "precio": 285000,
+                "imagen": "https://media.spdigital.cl/__sized__/products/tmponv4ay12_36297a77-thumbnail-1080x1080-70.jpg" 
+            },
+             
+            {
+                "sku":47,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "xbox One Call Of Duty", 
+                "color":"Especial Editon",
+                "precio": 280000,
+                "imagen": "https://m.media-amazon.com/images/I/51NSV2JMRYL._SX385_.jpghttps://m.media-amazon.com/images/I/51NSV2JMRYL._SX385_.jpg" 
+            },
+            
+            {
+                "sku":48,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "xbox One CyberPunk", 
+                "color":"Especial Editon",
+                "precio": 380000,
+                "imagen": "https://elchapuzasinformatico.com/wp-content/uploads/2020/04/Xbox-One-X-Cyberpunk-2077-Limited-Edition.jpg" 
+            },
+            
+            {
+                "sku":49,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "xbox One Gears 5", 
+                "color":"Especial Editon",
+                "precio": 280000,
+                "imagen": "https://super.com.ua/upload/iblock/b10/b10f598155bf9f53f60d8157261cf2e5.jpg" 
+            },
+
+
+            {
+                "sku":50,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "Xbox One", 
+                "color":"verde",
+                "precio": 280000,
+                "imagen": "https://m.media-amazon.com/images/I/51I9bYDTbXL._AC_SX522_.jpg" 
+            },
+
+            {
+                "sku":51,
+                "tipoProducto": "consola",
+                "modelo":"classic", 
+                "nombreProducto": "Xbox One", 
                 "color":"rojo",
                 "precio": 280000,
                 "imagen": "https://m.media-amazon.com/images/I/51ImoaJ0PrL._AC_SX355_.jpg" 
@@ -436,9 +766,59 @@
                 "precio": 410000,
                 "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4gpFmb6Np3yWFbsqf6ZNuvvl-eRJMzXjanw&usqp=CAU" 
             },
-
+            
             {
                 "sku":63,
+                "tipoProducto": "consola",
+                "modelo":"oled", 
+                "nombreProducto": "nintendo switch Animal Crossing", 
+                "color":"Especial Edition",
+                "precio": 410000,
+                "imagen": "https://i.linio.com/p/2c79f4246f51476daef1bfead75ca877-product.webp" 
+            },
+
+            {
+                "sku":64,
+                "tipoProducto": "consola",
+                "modelo":"oled", 
+                "nombreProducto": "nintendo switch Super Smash Bros", 
+                "color":"Especial Edition",
+                "precio": 410000,
+                "imagen": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/08/nintendo-switch-edicion-smash-bros-ultimate-2033651.jpg?itok=m-SNuzfl" 
+            },
+            
+            {
+                "sku":65,
+                "tipoProducto": "consola",
+                "modelo":"oled", 
+                "nombreProducto": "nintendo switch Hero Of Time", 
+                "color":"Especial Edition",
+                "precio": 410000,
+                "imagen": "https://tierragamer.com/wp-content/uploads/2017/04/switch-zelda.jpg" 
+            },
+            
+            {
+                "sku":66,
+                "tipoProducto": "consola",
+                "modelo":"oled", 
+                "nombreProducto": "nintendo switch Fortnite", 
+                "color":"Especial Edition",
+                "precio": 410000,
+                "imagen": "https://www.discoazul.com/uploads/media/images/nintendo-switch-azul-neon-rojo-neon-fortnite-codigo-descarga-1.jpg" 
+            },
+            
+            {
+                "sku":67,
+                "tipoProducto": "consola",
+                "modelo":"oled", 
+                "nombreProducto": "nintendo switch Monster Hunter", 
+                "color":"Especial Edition",
+                "precio": 410000,
+                "imagen": "https://as01.epimg.net/meristation/imagenes/2021/01/27/noticias/1611736372_930558_1611736493_noticia_normal.jpg" 
+            },
+
+            {
+                "sku":68,
                 "tipoProducto": "consola",
                 "modelo":"classic", 
                 "nombreProducto": "nintendo switch", 
@@ -448,7 +828,7 @@
             },
 
             {
-                "sku":64,
+                "sku":69,
                 "tipoProducto": "consola",
                 "modelo":"classic", 
                 "nombreProducto": "nintendo switch", 
@@ -458,7 +838,7 @@
             },
 
             {
-                "sku":65,
+                "sku":70,
                 "tipoProducto": "consola",
                 "modelo":"xl", 
                 "nombreProducto": "nintendo ds", 
@@ -466,15 +846,105 @@
                 "precio": 200000,
                 "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsV5KyVt3KSsr3q_mYdN1cO-hFH2Bl8qNz3Q&usqp=CAU" 
             },
+            
+            {
+                "sku":71,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds Super Mario Kart", 
+                "color":"Especial Edition",
+                "precio": 200000,
+                "imagen": "https://m.media-amazon.com/images/I/51hP7Y-OTSL._SX385_.jpg" 
+            },
+            
+            {
+                "sku":72,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds Yoshi", 
+                "color":"Especial Edition",
+                "precio": 200000,
+                "imagen": "https://m.media-amazon.com/images/I/51ShsMFyljL.jpg" 
+            },
+            
+            {
+                "sku":73,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds Samus", 
+                "color":"Especial Edition",
+                "precio": 200000,
+                "imagen": "https://images.zmart.cl/productos/Galerias/2017/08/08/N3DSX059%20(1)_M.jpg" 
+            },
+            
+            {
+                "sku":74,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds Firemblem", 
+                "color":"Especial Edition",
+                "precio": 200000,
+                "imagen": "https://m.media-amazon.com/images/I/511ejue6OCL.jpg" 
+            },
+            
+            {
+                "sku":75,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds Hyrule Edition", 
+                "color":"Especial Edition",
+                "precio": 200000,
+                "imagen": "https://m.media-amazon.com/images/I/911j1AqhZtL._AC_SL1500_.jpg" 
+            },
 
             {
-                "sku":66,
+                "sku":76,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds Majoras", 
+                "color":"Especial Edition",
+                "precio": 200000,
+                "imagen": "https://d8mkdcmng3.imgix.net/b472/pc-and-video-games-consoles-new-3ds-consoles-new-nintendo-3ds-xl-handheld-console-majoras-mask-special-edition-australian-stock-1.jpg?auto=format&bg=0FFF&fit=fill&h=600&q=100&w=600&s=43e9fac550d22d10aed2c789952f5ca6" 
+            },
+
+            {
+                "sku":77,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds Pokemon X & Y", 
+                "color":"Especial Edition",
+                "precio": 200000,
+                "imagen": "https://www.seekpng.com/png/detail/221-2211088_nintendo-3ds-xl-3ds-xl-special-edition-pokemon.png" 
+            },
+
+            {
+                "sku":78,
+                "tipoProducto": "consola",
+                "modelo":"xl", 
+                "nombreProducto": "nintendo ds Sun & Moon", 
+                "color":"Especial Edition",
+                "precio": 200000,
+                "imagen": "https://http2.mlstatic.com/D_NQ_NP_856711-MCO32016236074_082019-V.jpg" 
+            },
+
+            {
+                "sku":79,
                 "tipoProducto": "consola",
                 "modelo":"ds", 
                 "nombreProducto": "nintendo ds", 
                 "color":"rosa",
                 "precio": 200000,
                 "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFKKL1hRGSKuQRylJknm_Wu92hGRJw7rfl5Q&usqp=CAU" 
+            },
+
+            {
+                "sku":80,
+                "tipoProducto": "consola",
+                "modelo":"ds", 
+                "nombreProducto": "nintendo ds", 
+                "color":"rosa",
+                "precio": 200000,
+                "imagen": "https://www.nintenderos.com/wp-content/uploads/2009/04/limegreends.jpg" 
             },
 
             {

@@ -31,7 +31,7 @@ const productContainer = document.querySelector("#contentContainer")
 const historialDeCompra = document.getElementById("historial")
 const botCarro = document.getElementById("carro")
 const oferContainer = document.querySelector("#ofertas")
-const buscador = documento.querySelector("#buscador")
+const buscador = document.querySelector("#buscador")
 
 //<-----------------------------------------------------------------Funciones------------------------------------------------------------->
 
@@ -71,7 +71,7 @@ listenersContenido(".accesorio",renderizarProductos)
 listenersContenido(".otro",renderizarProductos)
 historialDeCompra.addEventListener("click",ultimaCompra)
 botCarro.addEventListener("click", confirmarCarro)
-buscador.addEventListener("onchange",)
+//buscador.addEventListener("onchange",)
 
 //Listeners selectarAll
 function listenersContenido(clase,funcion){
