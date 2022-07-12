@@ -233,14 +233,13 @@ function confirmarCarro(){
             <button id= "buttonLocal" class="buttonLocal">cargar local storage puto?</button>
         `
 
-        listenersContenido(".buttonLocal",  () => {carro =guardarCompra
+        listenersContenido(".buttonLocal",  () => {carro = JSON.parse(localStorage.getItem("guardarCompra"))
             listarCarro(carro)})
     }else{
             listarCarro(carro)
     }
 
 }
-
 
 //listar Carro
 function listarCarro(){
