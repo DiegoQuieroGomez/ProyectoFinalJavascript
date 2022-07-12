@@ -6,8 +6,9 @@ let descuento
 //Spread de data.producto de API en array local
 let todosMisProductos = []
 
+const fotosInicio = ["https://image.api.playstation.com/vulcan/img/rnd/202010/1003/aEXbirwnPkBmgJtqr5FizxCg.png","https://i.ytimg.com/vi/8HFkzLNCrRo/maxresdefault.jpg","https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_FinalFantasyXX2HDRemaster_image1600w.jpg","https://as01.epimg.net/meristation/imagenes/2022/07/01/avances/1656691551_996476_1656691982_noticia_normal.jpg"]
 
-//Contienen data total
+//Contienen data totals
 let mix = []
 
 //Contiene Ultima Compra Finalizada LocalStorage
@@ -50,12 +51,13 @@ const productosApi = async () => {
     const data = await response.json()
     mix = data
     todosMisProductos = [...data.data[0].producto,...data.data[1].producto,...data.data[2].producto]
-    
+
 }
 //------------------------------------------Ejecucion ----------------------------------------------------
 productosApi()  
 
 //Ejecución Menú
+mostrarInicio(fotosInicio)
 
 const renderizarProductos = (e) => {
     const fabricanteElegido = e.target.getAttribute("data-id")
@@ -103,9 +105,6 @@ function listarProductosPorTipo(array){
     
 }
 
-
-
-
 //Devuelve 3 objetos random del un array
 /*
 function mostrarOfertas(array){
@@ -136,51 +135,31 @@ function mostrarOfertas(array){
         
         listenersContenido("buttonCTA", agregarProducto)
     });
-
     
 }
 */
 
 
 function mostrarInicio(array){
-    const listInicio =  [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,3)
-    productContainer.innerHTML=""
-    listInicio.forEach((producto)=> {
-        
-        if(producto.tipoProducto == "consola") {
-            descuento = 0.93
-        }if (producto.tipoProducto == "juego"){
-            descuento = 0.91
-        }if(producto.tipoProducto == "accesorio"){
-            descuento = 0.95
-        }if(producto.tipoProducto == "otro"){
-            descuento = 0.05  
-        }
-
-        const inicio = document.createElement("div")
-        inicio.className = "inicio"
-        inicio.innerHTML =`         
-        <img src="${producto.imagen}" class="productImg">
-        <h2 class="productName"> ${producto.nombreProducto} </h2>
-        <span class="productPrice"> $ ${Math.round(producto.precio * descuento)} </span>
-        <button id= "${producto.sku}" class="buttonCTA"> Agregar al carro </button>
-     `  
-        productContainer.append(inicio)
-
-        
-        listenersContenido("buttonCTA", agregarProducto)
-    });
-
+    const inicio = [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,3)
+    inicio.forEach((foto)=> {
+    
+        const fotoIni = document.createElement("div")
+        fotoIni.className = "inicio"
+        fotoIni.innerHTML =`         
+        <img src="${foto}" class="fotoIni">
+        `
+        productContainer.append(fotoIni)
+    
+    })
     
 }
 
 //Buscador
-
-/*
-function buscar(){
-    if(array)
+function buscar(array){
+    
 }
-*/
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Añadir al Carro
