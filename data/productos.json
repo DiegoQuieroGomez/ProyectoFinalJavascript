@@ -515,6 +515,17 @@
                 "precio": 5990,
                 "imagen": "https://falabella.scene7.com/is/image/Falabella/gsc_110770368_279776_1?wid=1500&hei=1500&qlt=70" 
 
+            },
+
+            {
+                "sku":20561,
+                "tipoProducto": "otro",
+                "categoria":"Auriculares", 
+                "nombreProducto": "Audífonos Gamer Para Ps4 Con Micrófono", 
+                "plataforma":"PS4",
+                "precio": 5990,
+                "imagen": "https://falabella.scene7.com/is/image/Falabella/gsc_110770368_279776_1?wid=1500&hei=1500&qlt=70" 
+
             }
 
         ]
@@ -738,6 +749,28 @@
                 "plataforma": "XBOX ONE",
                 "precio": 20000,
                 "imagen": "https://cdn-products.eneba.com/resized-products/P3vjEzAWUKW8gY0E7q5-5e2-B3_LGkk1g4s05_9q1gs_350x200_1x-0.jpeg" 
+
+            },
+
+            {
+                "sku":4655,
+                "tipoProducto": "accesorio",
+                "categoria": "RACING", 
+                "nombreProducto": "Grid Leyends", 
+                "plataforma": "XBOX Series",
+                "precio": 20000,
+                "imagen": "https://smartcdkeys.com/image/cache/catalog/image/cache/data/products/grid-legends/cover/grid-legends-argentina-xbox-one-series-xs-smartcdkeys-cheap-cd-key-cover-390x580.webp" 
+
+            },
+
+            {
+                "sku":10655,
+                "tipoProducto": "otro",
+                "categoria": "RACING", 
+                "nombreProducto": "Grid Leyends", 
+                "plataforma": "XBOX Series",
+                "precio": 20000,
+                "imagen": "https://smartcdkeys.com/image/cache/catalog/image/cache/data/products/grid-legends/cover/grid-legends-argentina-xbox-one-series-xs-smartcdkeys-cheap-cd-key-cover-390x580.webp" 
 
             }
 
@@ -1011,9 +1044,32 @@
                 "precio": 35000,
                 "imagen": "https://m.media-amazon.com/images/I/81+Hkcsx7zL.jpg" 
 
+            },
+
+            {
+                "sku":2755,
+                "tipoProducto": "accesorio",
+                "categoria": "RACING", 
+                "nombreProducto": "Sonic Sega All Stars", 
+                "plataforma": "nintendo DS",
+                "precio": 35000,
+                "imagen": "https://m.media-amazon.com/images/I/81+Hkcsx7zL.jpg" 
+
+            },
+
+            {
+                "sku":755,
+                "tipoProducto": "otro",
+                "categoria": "RACING", 
+                "nombreProducto": "Sonic Sega All Stars", 
+                "plataforma": "nintendo DS",
+                "precio": 35000,
+                "imagen": "https://m.media-amazon.com/images/I/81+Hkcsx7zL.jpg" 
+
             }
 
 
+            
 
 
             

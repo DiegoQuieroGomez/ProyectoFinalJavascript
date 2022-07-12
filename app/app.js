@@ -1,12 +1,11 @@
 
 
 //Declaraciones
-
 let carro = []
-let ofertas = []
 let descuento
 //Spread de data.producto de API en array local
 let todosMisProductos = []
+
 
 //Contienen data total
 let mix = []
@@ -30,7 +29,8 @@ const cardContainer = document.querySelector("#cardContainer")
 const productContainer = document.querySelector("#contentContainer")
 const historialDeCompra = document.getElementById("historial")
 const botCarro = document.getElementById("carro")
-const oferContainer = document.querySelector("#ofertas")
+
+//const oferContainer = document.querySelector("#ofertas")
 const buscador = document.querySelector("#buscador")
 
 //<-----------------------------------------------------------------Funciones------------------------------------------------------------->
@@ -100,13 +100,14 @@ function listarProductosPorTipo(array){
         listenersContenido(".buttonCTA", agregarProducto)
 
     })
-        mostrarOfertas(array)
-    
     
 }
 
 
+
+
 //Devuelve 3 objetos random del un array
+/*
 function mostrarOfertas(array){
     const oferta =  [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,3)
     oferContainer.innerHTML=""
@@ -131,6 +132,40 @@ function mostrarOfertas(array){
         <button id= "${producto.sku}" class="buttonCTA"> Agregar al carro </button>
      `  
         oferContainer.append(ofer)
+
+        
+        listenersContenido("buttonCTA", agregarProducto)
+    });
+
+    
+}
+*/
+
+
+function mostrarInicio(array){
+    const listInicio =  [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,3)
+    productContainer.innerHTML=""
+    listInicio.forEach((producto)=> {
+        
+        if(producto.tipoProducto == "consola") {
+            descuento = 0.93
+        }if (producto.tipoProducto == "juego"){
+            descuento = 0.91
+        }if(producto.tipoProducto == "accesorio"){
+            descuento = 0.95
+        }if(producto.tipoProducto == "otro"){
+            descuento = 0.05  
+        }
+
+        const inicio = document.createElement("div")
+        inicio.className = "inicio"
+        inicio.innerHTML =`         
+        <img src="${producto.imagen}" class="productImg">
+        <h2 class="productName"> ${producto.nombreProducto} </h2>
+        <span class="productPrice"> $ ${Math.round(producto.precio * descuento)} </span>
+        <button id= "${producto.sku}" class="buttonCTA"> Agregar al carro </button>
+     `  
+        productContainer.append(inicio)
 
         
         listenersContenido("buttonCTA", agregarProducto)
