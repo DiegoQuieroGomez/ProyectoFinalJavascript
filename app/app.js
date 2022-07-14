@@ -51,7 +51,7 @@ const productosApi = async () => {
     const data = await response.json()
     mix = data
     todosMisProductos = [...data.data[0].producto,...data.data[1].producto,...data.data[2].producto]
-
+    //buscar(todosMisProductos)
 }
 //------------------------------------------Ejecucion ----------------------------------------------------
 productosApi()  
@@ -82,6 +82,21 @@ function listenersContenido(clase,funcion){
         botones.addEventListener("click", funcion)
     })
 }
+
+//Buscador
+/*
+function buscar(array){
+    let input = document.getElementById("buscador")
+    let filtro = input.v
+    let filtrado = []
+    for (let i = 0; i<array.length;i++){
+        if(array[i]== filtro.split("")){
+            filtrado.push(array[i])
+        }
+    }
+    console.log(filtrado)
+}
+*/
 
 //lista productos por tipo (CONSOLA/JUEGO/ACCESORIO/OTRO) -ARREGLAR DATOS SOLICITADOS-
 function listarProductosPorTipo(array){
@@ -141,7 +156,7 @@ function mostrarOfertas(array){
 
 
 function mostrarInicio(array){
-    const inicio = [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,3)
+    const inicio = [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,1)
     inicio.forEach((foto)=> {
     
         const fotoIni = document.createElement("div")
@@ -155,10 +170,7 @@ function mostrarInicio(array){
     
 }
 
-//Buscador
-function buscar(array){
-    
-}
+
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -197,7 +209,7 @@ function ultimaCompra(){
             ultima.className = "historialDeCompra"
             ultima.innerHTML = `
                 <img src="${producto.imagen}" class="productImg2">
-                <h1 class="producto"> ${producto.tipoProducto} ${producto.nombre} - SKU: ${producto.id}</h1>
+                <h1 class="producto"> ${producto.nombreProducto} - SKU: ${producto.sku}</h1>
             `
             productContainer.append(ultima)
 
@@ -207,10 +219,17 @@ function ultimaCompra(){
 //Localstorage y carro vacio
 function confirmarCarro(){
     if (carro.length ===0 ){
-        productContainer.innerHTML =`
-            <h1> carro vacio</h1>
-            <button id= "buttonLocal" class="buttonLocal">cargar local storage puto?</button>
+        productContainer.innerHTML = ""
+        
+        const cVacio = document.createElement("div")
+        cVacio.className = "carroVacio"
+        cVacio.innerHTML =
         `
+            <h1 class="tituloCarroVacio"> Tu carro está Vacio!!!</h1>
+            <h1 class="recuperarCarro"> ¿Deseas Recuperar tu última selección de productos? </h1>
+            <button id= "buttonLocal" class="buttonLocal">Recuperar Carro</button>
+        `
+        productContainer.append(cVacio)
 
         listenersContenido(".buttonLocal",  () => {carro = JSON.parse(localStorage.getItem("guardarCompra"))
             listarCarro(carro)})
