@@ -7,7 +7,7 @@ let descuento
 let todosMisProductos = []
 
 //Parce para slide XD No me dio tiempo
-const fotosInicio = ["sources/f1.png", "sources/f2.png", "sources/f3.png", "sources/f4.png"]
+const fotosInicio = [ "https://i.ytimg.com/vi/6bpmHn5qMHU/maxresdefault.jpg", "https://img.finalfantasyxiv.com/lds/h/6/UZckNxeRDupGDdyGfpN9f-r7xc.jpg?_ga=2.54078056.1367577568.1657996467-1729104679.1657996467", "https://img.finalfantasyxiv.com/lds/h/h/tc-V3QoRPlpbVmgIZRTAtiy2kU.jpg?_ga=2.75247058.1367577568.1657996467-1729104679.1657996467"]
 
 //Contienen data totals
 let mix = []
