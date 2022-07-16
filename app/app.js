@@ -6,7 +6,8 @@ let descuento
 //Spread de data.producto de API en array local
 let todosMisProductos = []
 
-const fotosInicio = ["https://image.api.playstation.com/vulcan/img/rnd/202010/1003/aEXbirwnPkBmgJtqr5FizxCg.png","https://i.ytimg.com/vi/8HFkzLNCrRo/maxresdefault.jpg","https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_FinalFantasyXX2HDRemaster_image1600w.jpg","https://as01.epimg.net/meristation/imagenes/2022/07/01/avances/1656691551_996476_1656691982_noticia_normal.jpg"]
+//Parce para slide XD No me dio tiempo
+const fotosInicio = ["sources/f1.png", "sources/f2.png", "sources/f3.png", "sources/f4.png"]
 
 //Contienen data totals
 let mix = []
@@ -30,14 +31,10 @@ const cardContainer = document.querySelector("#cardContainer")
 const productContainer = document.querySelector("#contentContainer")
 const historialDeCompra = document.getElementById("historial")
 const botCarro = document.getElementById("carro")
-
-//const oferContainer = document.querySelector("#ofertas")
 const buscador = document.querySelector("#buscador")
+const botonBuscar = document.querySelector("#botonBuscar")
 
 //<-----------------------------------------------------------------Funciones------------------------------------------------------------->
-
-
-
 
 
 //Confirma evento escuchado
@@ -66,11 +63,20 @@ const renderizarProductos = (e) => {
     listarProductosPorTipo(productos)
 }
 
+//Buscador
+const searchBar = () => {
+    const busqueda = buscador.value.toLowerCase()
+    const filtrado = todosMisProductos.filter((producto) => producto.nombreProducto.toLowerCase().includes(busqueda) || producto.tipoProducto.toLowerCase().includes(busqueda) )
+    listarProductosPorTipo(filtrado)
+
+}
+
 //Funcionalidad menu
 listenersContenido(".consola",renderizarProductos)
 listenersContenido(".juego",renderizarProductos)
 listenersContenido(".accesorio",renderizarProductos)
 listenersContenido(".otro",renderizarProductos)
+botonBuscar.addEventListener("click", searchBar)
 historialDeCompra.addEventListener("click",ultimaCompra)
 botCarro.addEventListener("click", confirmarCarro)
 //buscador.addEventListener("onchange",)
@@ -83,20 +89,6 @@ function listenersContenido(clase,funcion){
     })
 }
 
-//Buscador
-/*
-function buscar(array){
-    let input = document.getElementById("buscador")
-    let filtro = input.v
-    let filtrado = []
-    for (let i = 0; i<array.length;i++){
-        if(array[i]== filtro.split("")){
-            filtrado.push(array[i])
-        }
-    }
-    console.log(filtrado)
-}
-*/
 
 //lista productos por tipo (CONSOLA/JUEGO/ACCESORIO/OTRO) -ARREGLAR DATOS SOLICITADOS-
 function listarProductosPorTipo(array){
@@ -120,41 +112,6 @@ function listarProductosPorTipo(array){
     
 }
 
-//Devuelve 3 objetos random del un array
-/*
-function mostrarOfertas(array){
-    const oferta =  [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,3)
-    oferContainer.innerHTML=""
-    oferta.forEach((producto)=> {
-        
-        if(producto.tipoProducto == "consola") {
-            descuento = 0.93
-        }if (producto.tipoProducto == "juego"){
-            descuento = 0.91
-        }if(producto.tipoProducto == "accesorio"){
-            descuento = 0.95
-        }if(producto.tipoProducto == "otro"){
-            descuento = 0.05  
-        }
-
-        const ofer = document.createElement("div")
-        ofer.className = "oferta"
-        ofer.innerHTML =`         
-        <img src="${producto.imagen}" class="productImg">
-        <h2 class="productName"> ${producto.nombreProducto} </h2>
-        <span class="productPrice"> $ ${Math.round(producto.precio * descuento)} </span>
-        <button id= "${producto.sku}" class="buttonCTA"> Agregar al carro </button>
-     `  
-        oferContainer.append(ofer)
-
-        
-        listenersContenido("buttonCTA", agregarProducto)
-    });
-    
-}
-*/
-
-
 function mostrarInicio(array){
     const inicio = [...array].sort(()=> Math.random() > 0.5 ? 1 : -1).slice(0,1)
     inicio.forEach((foto)=> {
@@ -170,8 +127,6 @@ function mostrarInicio(array){
     
 }
 
-
-
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Añadir al Carro
@@ -184,7 +139,7 @@ const agregarProducto = (e) =>{
     localStorage.setItem("guardarCompra", guardarCompra)
     Toastify({
         text: "Producto añadido",
-        duration: 3000,
+        duration: 1000,
         destination:"",
         newWindow: true,
         close: true,
@@ -192,7 +147,7 @@ const agregarProducto = (e) =>{
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+          background: "linear-gradient(to right, #b9cae7, #97e672)",
         },
         onClick: function(){} // Callback after click
       }).showToast();
